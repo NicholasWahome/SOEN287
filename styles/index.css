@@ -54,7 +54,10 @@ header .name-wrapper {
     text-decoration: none;
     color: white;
 }
-header .hamburger a {
+.hamburger{
+    transform: rotate(0deg);
+}
+.main-banner .hamburger a {
     height: auto; 
     font-family: "Syncopate", Helvetica;
     font-weight: 500;
@@ -63,7 +66,7 @@ header .hamburger a {
     padding-top: 3%;
     text-decoration: none;
     color: white;
-    transform: rotate(0deg);
+    
     
 
 }
@@ -79,8 +82,8 @@ header .login{
     text-decoration: none;
     color: white;
 }
-header .login-icon{
-    width: 100%
+.main-banner .login-icon{
+    width: auto;
     
     
 
@@ -92,24 +95,33 @@ header .login-icon{
     background-color: #fff;
     padding-left: 10%;
     padding-right: 10%;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    display: block;
+    display: none;
+    overflow: hidden;
+    padding-top: 1%;
+    padding-bottom: 1%;
 
 }
 nav ul{
     display: flex;
     list-style: none;
     justify-content: space-between;
+
 }
 
-nav a {
+#navbar a {
     color: black;
     text-decoration: none;
     font-family: "Rubik";
     font-size: 20px;
-    
+    padding-top: 100%;
+    padding-bottom: 100%; 
+    padding-left: 20px;
+    padding-right: 20px;
 
+}
+#navbar a:hover{
+    background-color: #000000;
+     color: #fff; 
 }
 
 /* Styles for the main content */
@@ -143,12 +155,7 @@ nav a {
     margin-right: 25%;
 
 
-    /* background-color: #f1d0e6;
-    margin-right: 50%;
-    text-align: right;
-    padding-right: 2%;
-    padding-top: 1%;
-    padding-bottom: 1%; */
+
 }
 .buyAndSell a{
     text-decoration: none;
@@ -157,8 +164,9 @@ nav a {
     border: 3px solid;
     border-color: #ffffff;
     mix-blend-mode: exclusion;
+    font-size: 25px;
 
-    padding: 2%;
+    padding: 3%;
     margin-left: 5px;
     margin-right: 5px;
 
@@ -169,6 +177,45 @@ nav a {
 }
 
 /* website info */
+.description .box1{
+
+    background-color: #f1d0e6;
+    margin-right: 50%;
+    text-align: right;
+    font-family: "Rubik-Mono-One";
+    font-size: 20px;
+    margin-top: 5%;
+    padding-right: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%; 
+}
+.description #box1{
+    color: #ffffff;
+    font-family: "Rubik";
+    margin-left: 25%;
+    margin-right: 25%;
+    font-size: 20px;
+}
+.description .box2{
+
+    background-color: #F4E6D2;
+    margin-left: 50%;
+    text-align: left;
+    font-family: "Rubik-Mono-One";
+    font-size: 20px;
+    margin-top: 5%;
+    padding-left: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%; 
+}
+.description #box2{
+    color: #ffffff;
+    font-family: "Rubik";
+    margin-right: 25%;
+    margin-left: 25%;
+    font-size: 20px;
+    text-align: right;
+}
 
 
 
@@ -194,14 +241,28 @@ nav a {
         width: 50%
     
     }
-    nav a {
+    #navbar a {
 
         font-size: 15px;
-        
+        padding-left: 5px;
+        padding-right: 5px;
     
     }
-    .buyAndSell{
+    .buyAndSell a{
         font-size: 10px;
 
     }
+    .description .box1{
+        font-size: 10px;
+    }
+    .description .box2{
+        font-size: 10px;
+    }
+    .description #box1{
+        font-size: 10px;
+    }
+    .description #box2{
+        font-size: 10px;
+    }
+    
 }
