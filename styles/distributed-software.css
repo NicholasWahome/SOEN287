@@ -16,6 +16,18 @@
     padding-right: 10px;
 }
 
+/* main content */
+.content-wrapper{
+    grid: 15% auto;
+}
+.prduct-list{
+    background-color: #F4F4F4;
+}
+
+
+
+
+
 
 @media (max-width: 768px) {
     .store-nav{
