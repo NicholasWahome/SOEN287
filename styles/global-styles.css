@@ -33,7 +33,6 @@ a{
 
 
 /* Styles for the header */
-
 .main-banner{
     background-color: #000000;
 
@@ -44,6 +43,7 @@ a{
    
     display: flex;
     justify-content: space-between;
+;
 }
 .left-header-content{
     display: flex;
@@ -55,14 +55,16 @@ a{
 header .name-wrapper {
     height: auto; 
     font-family: "Syncopate", Helvetica;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 30px;
     letter-spacing: 4.5px;
     padding-left: 20%;
     padding-top: 3%;
 }
 .hamburger{
+    transition-duration: 0.4s;
     transform: rotate(0deg);
+    
 }
 .main-banner .hamburger a {
     height: auto; 
@@ -119,7 +121,7 @@ nav ul{
     padding-bottom: 100%; 
     padding-left: 20px;
     padding-right: 20px;
-
+    transition-duration: 0.4s;
 }
 #navbar a:hover{
     background-color: #000000;

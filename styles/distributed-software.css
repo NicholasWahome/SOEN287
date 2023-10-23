@@ -1,27 +1,123 @@
 /* store navigation */
-.store-nav{
-  
-    margin: 3% 15% 0% 15%;
+.product-nav{
+    margin: 3% 2% 5% 2%;
+    overflow:hidden;
 }
-.store-nav ul{
+.product-nav ul{
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     list-style: none;
+     margin: 0% 2% 0% 2%; 
+   
 
 }
-.store-nav li{
+.product-nav li{
+    display: block;
     font-family: "Rubik";
     font-size: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
+
+    height: 5%;
+    text-align: center;
+    padding: 15px 10px 5px 0px;
+}
+.product-nav a{
+
+    padding: 15% 20px 100%;
+    transition-duration: 0.4s;
+
+}
+.product-nav a:hover{
+    background-color: #F4F4F4;
+    color:black;
+    
+
 }
 
 /* main content */
+
+/* grid styles */
 .content-wrapper{
-    grid: 15% auto;
+    display: grid;
+    grid-template-columns: 15% 70%;
+    margin-top: 1%;
+}
+.account-sidebar{
+    color:white;
+    /* background-color: blue; */
 }
 .prduct-list{
+    background-color: black;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    justify-content: center;
+}
+
+/* product card  */
+.product{
+    display: grid;
+    margin:2%;
     background-color: #F4F4F4;
+    text-align: center;
+    justify-items: center;
+    padding: 5%;
+    border-radius: 10px;
+    transition-duration: 0.2s;
+}
+.product:hover{
+    background-color: #F4E6D2;
+    box-shadow: 0px 0px 0px 5px #F4E6D2;
+
+}
+.product .image-container{
+    background-color: rgb(48, 48, 48);
+    width: 75%;
+    height: auto;
+    border-radius: 10px;
+    
+}
+.product img{
+    margin: 10%;
+    position: relative;
+    max-width: 80%;
+}
+
+#product-name{
+    font-family: "Rubik";
+    font-size: 20px;
+    transition-duration: 0.4s;
+    font-weight: 500;
+    margin-top: 5%;
+}
+#product-version{
+    font-family: "Rubik";
+    font-size: 20px;
+    transition-duration: 0.4s;
+    
+}
+.product #manage-button{
+    margin: 5% 0%; 
+    width: 70%;
+    font-weight: 200;
+}
+.product #manage-button a{
+    display: inline-block;
+    background-color: #000000;
+    color: #F4F4F4;
+    font-family: "Rubik";
+    cursor: pointer;
+    align-items: center;
+
+    border-radius: 10px;
+    width: 95%;
+    padding: 10% 5%;
+    transition-duration: 0.4s;
+
+}
+.product #manage-button a:hover{
+    background-color:#89D5DD;
+    box-shadow:4px 4px 5px 0px #219caa inset, 0px 0px 0px 5px #89D5DD;
+    color: #000000;
+    font-weight: 600;
 }
 
 
@@ -30,12 +126,11 @@
 
 
 @media (max-width: 768px) {
-    .store-nav{
-        margin: 3% 10% 0% 10%;
-       
+    .product-nav li{
+        font-size: 10px;
     }
-    .store-nav li{
-        font-size: 15px;
+    .product, #product-name, #product-version{
+        font-size: 10px;
     }
 
 }

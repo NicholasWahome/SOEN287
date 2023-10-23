@@ -14,7 +14,7 @@
     
 }
 
-/* buy and sell buttons */
+/* purchase and distribute buttons */
 .purchase-distribute{
     color: #F4F4F4;
     font-family: "Rubik-Mono-One";
@@ -38,12 +38,13 @@
     padding: 3%;
     margin-left: 5px;
     margin-right: 5px;
+    transition-duration: 0.4s;
 }
 .purchase-distribute a:hover{
     color: rgb(0, 0, 0); 
     background-color: #F4F4F4;
     box-shadow: 0px 0px 0px 5px #F4F4F4;
-
+    
 }
 
 /* website info */
