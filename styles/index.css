@@ -1,138 +1,8 @@
-/* fonts */
-@font-face {
-    font-family: "Syncopate";
-    src: url(../fonts/Syncopate-Regular.ttf) format('truetype');
-}
-@font-face {
-    font-family: "Rubik";
-    src: url(../fonts/Rubik-VariableFont_wght.ttf) format('truetype');
-}
-@font-face {
-    font-family: "Rubik-Mono-One";
-    src: url(../fonts/RubikMonoOne-Regular.ttf) format('truetype');
-}
-
-
-
-/* Reset some default styles */
-body, h1, h2, p, ul {
-    margin: 0;
-    padding: 0;
-}
-body{
-    background-color: #000000;
-}
-
-/* Styles for the header */
-
-.main-banner{
-    background-color: #000000;
-
-    color: #fff;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-   
-    display: flex;
-    justify-content: space-between;
-}
-.left-header-content{
-    display: flex;
-}
-.right-header-content{
-    display: flex;
-    margin-right: 5%;
-}
-header .name-wrapper {
-    height: auto; 
-    font-family: "Syncopate", Helvetica;
-    font-weight: 500;
-    font-size: 30px;
-    letter-spacing: 4.5px;
-    padding-left: 20%;
-    padding-top: 3%;
-    text-decoration: none;
-    color: white;
-}
-.hamburger{
-    transform: rotate(0deg);
-}
-.main-banner .hamburger a {
-    height: auto; 
-    font-family: "Syncopate", Helvetica;
-    font-weight: 500;
-    font-size: 30px;
-    padding-left: 5%;
-    padding-top: 3%;
-    text-decoration: none;
-    color: white;
-    
-    
-
-}
-
-header .login{
-    
-
-    display: flex;
-    font-family: "Rubik", Helvetica;
-    font-size: 20px;
-    padding-right: 10%;
-    margin-right: 15%;
-    text-decoration: none;
-    color: white;
-}
-.main-banner .login-icon{
-    width: auto;
-    
-    
-
-}
-
-
-/* Navigation styles */
-#navbar{
-    background-color: #fff;
-    padding-left: 10%;
-    padding-right: 10%;
-    display: none;
-    overflow: hidden;
-    padding-top: 1%;
-    padding-bottom: 1%;
-
-}
-nav ul{
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
-
-}
-
-#navbar a {
-    color: black;
-    text-decoration: none;
-    font-family: "Rubik";
-    font-size: 20px;
-    padding-top: 100%;
-    padding-bottom: 100%; 
-    padding-left: 20px;
-    padding-right: 20px;
-
-}
-#navbar a:hover{
-    background-color: #000000;
-     color: #fff; 
-}
-
 /* Styles for the main content */
 .main-content {
     text-align: center;
     padding: 20px;
-    color: #fff;
-
-    /* border: 3px solid;
-    border-color: #ffffff;
-    mix-blend-mode: exclusion; */
+    color: #F4F4F4;
 }
 
 .main-content img {
@@ -145,35 +15,35 @@ nav ul{
 }
 
 /* buy and sell buttons */
-.buyAndSell{
-    color: #ffffff;
+.purchase-distribute{
+    color: #F4F4F4;
     font-family: "Rubik-Mono-One";
     text-align: center;
     display: flex;
     justify-content: space-between;
     margin-left: 25%;
     margin-right: 25%;
+    letter-spacing: 2px;
 
 
 
 }
-.buyAndSell a{
-    text-decoration: none;
-    color: white;
+.purchase-distribute a{
 
     border: 3px solid;
-    border-color: #ffffff;
+    border-color: #F4F4F4;
     mix-blend-mode: exclusion;
     font-size: 25px;
 
     padding: 3%;
     margin-left: 5px;
     margin-right: 5px;
-
 }
-.buyAndSell a:hover{
-    color: rgb(0, 0, 0);
-    background-color: #fff;
+.purchase-distribute a:hover{
+    color: rgb(0, 0, 0); 
+    background-color: #F4F4F4;
+    box-shadow: 0px 0px 0px 5px #F4F4F4;
+
 }
 
 /* website info */
@@ -188,13 +58,15 @@ nav ul{
     padding-right: 2%;
     padding-top: 1%;
     padding-bottom: 1%; 
+    letter-spacing: 5px;
 }
-.description #box1{
-    color: #ffffff;
+.description #box1-text{
+    color: #F4F4F4;
     font-family: "Rubik";
     margin-left: 25%;
     margin-right: 25%;
     font-size: 20px;
+    letter-spacing: 2px;
 }
 .description .box2{
 
@@ -207,14 +79,16 @@ nav ul{
     padding-left: 2%;
     padding-top: 1%;
     padding-bottom: 1%; 
+    letter-spacing: 5px;
 }
-.description #box2{
-    color: #ffffff;
+.description #box2-text{
+    color: #F4F4F4;
     font-family: "Rubik";
     margin-right: 25%;
     margin-left: 25%;
     font-size: 20px;
     text-align: right;
+    letter-spacing: 2px;
 }
 
 
@@ -222,33 +96,7 @@ nav ul{
 
 /* Mobile styles - adjust as needed */
 @media (max-width: 768px) {
-    header .name-wrapper {
-
-        font-size: 20px;
-
-    }
-    header .hamburger{
-
-        font-size: 20px;
-
-    
-    } 
-    header .login{
-        font-size: 15px;
-
-    }
-    header .login-icon{
-        width: 50%
-    
-    }
-    #navbar a {
-
-        font-size: 15px;
-        padding-left: 5px;
-        padding-right: 5px;
-    
-    }
-    .buyAndSell a{
+    .purchase-distribute a{
         font-size: 10px;
 
     }
@@ -258,10 +106,10 @@ nav ul{
     .description .box2{
         font-size: 10px;
     }
-    .description #box1{
+    .description #box1-text{
         font-size: 10px;
     }
-    .description #box2{
+    .description #box2-text{
         font-size: 10px;
     }
     

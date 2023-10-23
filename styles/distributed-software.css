@@ -1,0 +1,29 @@
+/* store navigation */
+.store-nav{
+  
+    margin: 3% 15% 0% 15%;
+}
+.store-nav ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+
+}
+.store-nav li{
+    font-family: "Rubik";
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .store-nav{
+        margin: 3% 10% 0% 10%;
+       
+    }
+    .store-nav li{
+        font-size: 15px;
+    }
+
+}
