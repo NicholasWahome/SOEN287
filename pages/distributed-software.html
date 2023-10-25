@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Store - Getsoft</title>
+    <title>Provider Products - Getsoft</title>
     <link rel="stylesheet" href="../styles/global-styles.css" />
     <link rel="stylesheet" href="../styles/distributed-software.css" />
 
@@ -37,14 +37,31 @@
 
     <!-- product grid. providers will have a view of each individual product -->
         <div class="content-wrapper">
-            <div class="account-sidebar">Place sidebar here</div>
+            <!-- account sidebar -->
+            <div class="account-sidebar-wrapper">
+                <div class="sidebar">  
+                    <div class="sidebar-title">Sidebar</div>
+                    <ul>
+                        <li><a href="#">Account Page</a></li>
+                        <li><a href="../pages/distributed-software.html"> list of products</a></li>
+
+                     </ul>
+                </div>
+
+            </div>
             <div class="list-wrapper">
                 
                 <!-- product nav -->
                 <div class="product-nav">
                     <ul>
-                        <li><a href="#">Sort </a></li>
+                        <li  class="dropdown-button"  ><a class="drpdwn" href="#">Sort </a>
+                            <div class="dropdown-container">
+                                <a href="dropdown-links">Sort by Name</a>
+                                <a href="dropdown-links">Sort by Date</a>
+                            </div>
+                        </li>
                         <li><a href="#">Add New Product</a></li>
+
                     </ul>
                     <div id="line">.</div>
                 </div>
@@ -57,7 +74,7 @@
                         </div>
                         
                         <div id="product-name">Fl Studio</div>
-                        <div id="product-version">Fruity - Lifetime</div>
+                        <div id="product-version">Fruity</div>
 
                         <div id="manage-button"> <a href="../index.html">Manage Product</a> </div>
                     </div>
@@ -68,7 +85,7 @@
                         </div>
                         
                         <div id="product-name">Fl Studio</div>
-                        <div id="product-version">Producer - Lifetime</div>
+                        <div id="product-version">Producer</div>
 
                         <div id="manage-button"> <a href="../index.html">Manage Product</a> </div>
                     </div>
@@ -79,7 +96,7 @@
                         </div>
                         
                         <div id="product-name">Fl Studio</div>
-                        <div id="product-version">Signature - Lifetime</div>
+                        <div id="product-version">Signature</div>
 
                         <div id="manage-button"> <a href="../index.html">Manage Product</a> </div>
                     </div>
@@ -90,7 +107,7 @@
                         </div>
                         
                         <div id="product-name">Fl Studio</div>
-                        <div id="product-version">All Plugins Edition - Lifetime</div>
+                        <div id="product-version">All Plugins Edition</div>
 
                         <div id="manage-button"> <a href="../index.html">Manage Product</a> </div>
                     </div>
@@ -101,7 +118,7 @@
                         </div>
                         
                         <div id="product-name">McAfee+</div>
-                        <div id="product-version">Premuium - One Year</div>
+                        <div id="product-version">Premuium</div>
 
                         <div id="manage-button"> <a href="../index.html">Manage Product</a> </div>
                     </div>
