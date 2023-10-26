@@ -1,0 +1,83 @@
+/* Styles for the main content */
+.main-content {
+    text-align: center;
+    padding: 20px;
+    }
+    
+    
+    .main-content img {
+    max-width: 90%;
+    height: auto;
+    position: relative;
+    object-fit: fill;
+    }
+    
+    
+    @media (max-width: 768px) {
+    body {
+    font-size: 14px;
+    }
+    }
+    
+    
+    .details {
+    display: inline;
+    margin-right: 10px;
+    color: whitesmoke;
+    }
+    
+    
+    #list {
+    background-color: whitesmoke;
+    padding-bottom: 300px;
+    padding-top: 20px;
+    width: 1000px;
+    height: 500px;
+    padding-left: 20px;
+    display: inline-block;
+    margin-left: 50px;
+    color: black;
+    overflow: auto; /* Enable scrolling when content overflows the defined height */
+    border: 1px solid #ccc; /* Add a border (optional) */
+    padding: 10px; /* Add padding (optional) */
+    }
+    
+    
+    #search-bar{
+    background-color: white;
+    padding: 10px;
+    }
+    #list ul{
+    list-style-type: none;
+    color: black;
+    }
+    #list ul li {
+    list-style-type: none;
+    color: black;
+    }
+    #list li a{
+    color:black;
+    text-decoration: underline;
+    }
+    
+    
+    #dashboard-box{
+    background-color: white;
+    padding:5px;
+    margin-left: 20px;
+    width: 200px;
+    margin-top: 50px;
+    display: inline-block;
+    }
+    
+    
+    #dashboard-box ul{
+    list-style-type: none;
+    }
+    
+    
+    #dashboard-box ul li {
+    list-style-type: none;
+    margin-bottom: 20px;
+    }
+    
