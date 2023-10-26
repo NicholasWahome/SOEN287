@@ -1,0 +1,143 @@
+
+/*Myaccount css*/
+
+
+/*Dashboard*/
+#greet
+{
+color: white;
+font-family: "Rubik", Helvetica;
+font-size: large;
+margin-right: 76%;
+margin-left: 6.5%;
+margin-top: 4%; 
+}
+.container
+{
+    width: 92%;
+    display: table;
+    margin-left: 6.5%;
+}
+.containerrow
+{
+    display:table-row;
+}
+
+.dashboardbox
+{
+display:table-cell;
+width:13%;
+background-color: white;
+font-family: "Rubik", Helvetica;
+padding-left: 0.7%;
+padding-top: 1%;
+padding-right: 2%;
+padding-bottom:2%;
+margin-right: 5%;
+margin-left: 6.5%;
+margin-top: 2%; 
+list-style: none;
+}
+.dashboardcontent
+{
+display:table-cell;
+width:70%;
+font-family: "Rubik", Helvetica;
+padding-left: 2%;
+}
+#organizecontent
+{
+    width:100%;
+    height:100%;
+}
+#dashboardline
+{
+    margin: 2%,2%;
+}
+
+.dashboardcontent #lastproducts
+{
+    color:white;
+    margin-top: 10%;
+}
+.dashboardcontent #Accountinfo
+{
+    color:white;
+    margin-top: 10%;
+    
+}
+
+.dashboardcontent #Addressbook
+{
+    color:white;
+    padding-left: 6%;
+ 
+    
+}
+
+#shippingbox
+{
+    padding-left:20%;
+}
+#defaultbutton
+{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family:"Rubik" ;
+    font-size:16px;
+    
+}
+#Editbutton
+{
+    background: none;
+    border: none;
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+#passbutton
+{
+    background: none;
+    border: none;
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+#editaddress
+{
+    background: none;
+    border: none;
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+
+.dashboardbox #ul
+{
+list-style: none;
+}
+
+
+/* List */
+.dashboardbox #listt
+{
+margin-top: 9%;
+}
+.dashboardbox #dashboard
+{
+margin-top: 1%;
+font-weight: bold;
+}
+.dashboardbox #logout
+{
+padding-top: 40%;
+}
+.dashboardcontent #title
+{
+color: white;
+}
+
+

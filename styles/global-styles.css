@@ -1,0 +1,227 @@
+/* fonts */
+@font-face {
+    font-family: "Syncopate";
+    src: url(../fonts/Syncopate-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: "Rubik";
+    src: url(../fonts/Rubik-VariableFont_wght.ttf) format('truetype');
+}
+@font-face {
+    font-family: "Rubik-Mono-One";
+    src: url(../fonts/RubikMonoOne-Regular.ttf) format('truetype');
+}
+
+
+
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+}
+a{
+    text-decoration: none;
+    color: #F4F4F4;
+}
+#line{
+    background-color: aliceblue;
+    height: 3px;
+    margin-top: 5px;
+}
+
+
+/* Styles for the header */
+.main-banner{
+    background-color: #000000;
+
+    color: #F4F4F4;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+   
+    display: flex;
+    justify-content: space-between;
+;
+}
+.left-header-content{
+    display: flex;
+}
+.right-header-content{
+    display: flex;
+    margin-right: 5%;
+}
+header .name-wrapper {
+    height: auto; 
+    font-family: "Syncopate", Helvetica;
+    font-weight: 700;
+    font-size: 30px;
+    letter-spacing: 4.5px;
+    padding-left: 20%;
+    padding-top: 3%;
+}
+.hamburger{
+    transition-duration: 0.4s;
+    transform: rotate(0deg);
+    
+}
+.main-banner .hamburger a {
+    height: auto; 
+    font-family: "Syncopate", Helvetica;
+    font-weight: 500;
+    font-size: 30px;
+    padding-left: 5%;
+    padding-top: 3%;
+    
+    
+
+}
+
+header .login{
+    
+
+    display: flex;
+    font-family: "Rubik", Helvetica;
+    font-size: 20px;
+    padding-right: 10%;
+    margin-right: 15%;
+}
+.main-banner .login-icon{
+    width: auto;
+    
+    
+
+}
+
+
+/* Navigation styles */
+#navbar{
+    background-color: #F4F4F4;
+    padding-left: 15%;
+    padding-right: 15%;
+    display: none;
+    overflow: hidden;
+    padding-top: 1%;
+    padding-bottom: 1%;
+
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+
+}
+
+#navbar a {
+    color: black;
+    font-family: "Rubik";
+    font-size: 20px;
+    padding-top: 100%;
+    padding-bottom: 100%; 
+    padding-left: 20px;
+    padding-right: 20px;
+    transition-duration: 0.4s;
+}
+#navbar a:hover{
+    background-color: #000000;
+     color: #F4F4F4; 
+}
+
+/* footer styles */
+footer{
+    display: block;
+    margin: 10% 0%  2%;
+}
+
+.logoBanner-wrapper{
+    width: 100%;
+    text-align: center;
+    margin: 2% 0%  0%;
+    
+}
+footer .footerLogo{
+    font-family: "Syncopate", Helvetica;
+
+    font-size:75px;
+    letter-spacing: 25px;
+
+
+
+}
+/* footer credits */
+footer #line{
+margin: 2% 2%;
+}
+.footer-info{
+    margin: 0% 10%;
+}
+.credits-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 2px;
+}
+
+.credit-row{
+    display: flex;
+    color: #F4F4F4;
+    font-family: "Rubik";
+    font-size: 15px;
+    margin: 2% 0%;
+    letter-spacing: 2px;
+    width: 100%;
+}
+
+
+@media (max-width: 1018px){
+    .credit-row{
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+}
+@media (max-width: 768px) {
+    header .name-wrapper {
+
+        font-size: 20px;
+
+    }
+    .main-banner .hamburger a{
+
+        font-size: 20px;
+
+    
+    } 
+    header .login{
+        font-size: 15px;
+
+    }
+    header .login-icon{
+        width: 50%
+    
+    }
+    #navbar {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    #navbar a {
+
+        font-size: 15px;
+        padding-left: 5px;
+        padding-right: 5px;
+    
+    }
+    footer .footerLogo{
+        font-size: 20px;
+    }
+    .credit-row{
+        font-size: 5px;
+        letter-spacing: 1px;
+    }
+}
+@media (max-width: 382px){
+    .credits-container{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 2px;
+    }
+}

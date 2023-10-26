@@ -1,0 +1,119 @@
+/* Styles for the main content */
+.main-content {
+    text-align: center;
+    padding: 20px;
+    color: #F4F4F4;
+}
+
+.main-content img {
+    max-width: 90%;
+    height: auto;
+    position:relative;
+    object-fit: fill;
+
+    
+}
+
+/* purchase and distribute buttons */
+.purchase-distribute{
+    color: #F4F4F4;
+    font-family: "Rubik-Mono-One";
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 25%;
+    margin-right: 25%;
+    letter-spacing: 2px;
+
+
+
+}
+.purchase-distribute a{
+
+    border: 3px solid;
+    border-color: #F4F4F4;
+    mix-blend-mode: exclusion;
+    font-size: 25px;
+
+    padding: 3%;
+    margin-left: 5px;
+    margin-right: 5px;
+    transition-duration: 0.4s;
+}
+.purchase-distribute a:hover{
+    color: rgb(0, 0, 0); 
+    background-color: #F4F4F4;
+    box-shadow: 0px 0px 0px 5px #F4F4F4;
+    
+}
+
+/* website info */
+.description .box1{
+
+    background-color: #f1d0e6;
+    margin-right: 50%;
+    text-align: right;
+    font-family: "Rubik-Mono-One";
+    font-size: 20px;
+    margin-top: 5%;
+    padding-right: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%; 
+    letter-spacing: 5px;
+}
+.description #box1-text{
+    color: #F4F4F4;
+    font-family: "Rubik";
+    margin-left: 25%;
+    margin-right: 25%;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+.description .box2{
+
+    background-color: #F4E6D2;
+    margin-left: 50%;
+    text-align: left;
+    font-family: "Rubik-Mono-One";
+    font-size: 20px;
+    margin-top: 5%;
+    padding-left: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%; 
+    letter-spacing: 5px;
+}
+.description #box2-text{
+    color: #F4F4F4;
+    font-family: "Rubik";
+    margin-right: 25%;
+    margin-left: 25%;
+    font-size: 20px;
+    text-align: right;
+    letter-spacing: 2px;
+}
+
+
+
+
+
+
+/* Mobile styles - adjust as needed */
+@media (max-width: 768px) {
+    .purchase-distribute a{
+        font-size: 10px;
+
+    }
+    .description .box1{
+        font-size: 10px;
+    }
+    .description .box2{
+        font-size: 10px;
+    }
+    .description #box1-text{
+        font-size: 10px;
+    }
+    .description #box2-text{
+        font-size: 10px;
+    }
+    
+}
