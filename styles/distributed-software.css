@@ -148,15 +148,17 @@
 /* temporary sidebar */
 
 .account-sidebar-wrapper{
-    margin:5% 5% 5% 5%;
+    margin:5% 5% 5% 0%;
     transition-duration: 0.4s;
-    
+
     
 }
 .account-sidebar-wrapper .sidebar-title{
     color: #000000;
-    background-color: #F4F4F4;
-    padding: 5% 0%;
+    background-color: #F1D0E6;
+    padding: 5% 20%;
+    text-align: right;
+    box-shadow: 10px 10px 10px 1px #362731;
     
 }
 .sidebar{
@@ -165,21 +167,20 @@
     font-size: 20px;
     font-family: "Rubik";
     font-weight: 400 ;
-
-    margin: 25% 5% 5% 5%;
-    padding: 0% 0% 20% 0%;
-    border: 3px solid;
-    border-color: #F4F4F4;
-    border-radius: 5px;
+    margin: 63% 5% 5% 0%;
+    
+    
     
 }
 .sidebar a{
     display: block;
     color: #F4F4F4;
     padding: 4% 3%;
-    margin-top: 5%;
+
     transition-duration: 0.4s;
     box-shadow: 0px 0px 0px 0px inset;
+    
+    
     
 }
 .sidebar a:hover{
@@ -190,6 +191,17 @@
 }
 .sidebar ul{
     list-style: none;
+
+
+    margin-left: 15%;
+    padding: 5% 0% 20% 0%;
+    border: 3px solid;
+    border-color: #F4F4F4;
+    border-radius: 0px 0px 5px 5px; 
+
+    background-color: rgb(19, 19, 19);
+
+    box-shadow: 10px 10px 10px 1px #362731;
 }
 
 
