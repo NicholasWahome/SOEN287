@@ -76,6 +76,8 @@
     font-weight: 200;
     color: #000000;
     font-family: "Rubik";
+
+    
     
     
 }
@@ -84,10 +86,11 @@
     height: fit-content;
     font-size: 25px;
     font-weight: 300;
-    background-color: #F4F4F4;
-    border-radius: 5px;
+    border-radius: 10px;
     margin: 2%;
     
+    border: 3px solid;
+    border-color: #F4F4F4;
 
 }
 .sn-form input{
@@ -98,43 +101,57 @@
 
 
 .date-wrapper{
-    background-color: #F4E6D2;
+    background-color: #F4F4F4;
     margin: 2%;
 
     padding: 2%;
     border-radius: 5px;
-    box-shadow:4px 4px 10px 0px #000000
+    box-shadow:4px 4px 10px 0px #F4F4F4
 
 }
-.date-wrapper .date-button{
+.date-wrapper #date-button{
     display: block;
     width: 50%;
     padding: 2% 2% 2% 2%;
     border-radius: 5px;
     background-color: #F4F4F4;
-    
+    font-size: large;
 }
-/* F4E6D2 */
 .amount-wrapper{
     padding: 0% 0% 0% 0%;
-    background-color: #F4E6D2;
+    background-color: #F4F4F4;
     margin: 2% 2%;
     padding: 2%;
     border-radius: 5px;
-    box-shadow:4px 4px 10px 0px #000000
+    box-shadow:4px 4px 10px 0px #f4f4f4
 }
 .amount-wrapper input{
     padding:2%;
     background-color: #F4F4F4;
+    font-size: large;
 }
 .submit-wrapper input{
     font-size: 20px;
     margin:  0% 2% 2% 2%;
     width:96%;
     padding: 2%;
-    box-shadow:4px 4px 10px 0px #000000
-}
+    box-shadow:4px 4px 10px 0px #F4F4F4;
+    background-color: #000000;
+    color:#F4F4F4;
+    transition-duration: 0.4s;
+    border-radius: 5px;
+    border: 3px solid;
+    border-color: #F4F4F4;
 
+}
+.submit-wrapper input:hover{
+    border: 3px solid;
+    border-color: #89D5DD;
+    background-color:#89D5DD;
+    box-shadow:4px 4px 5px 0px #219caa inset, 0px 0px 0px 5px #89D5DD;
+    color: #001e38;
+    font-weight: 800;
+}
 
 
 

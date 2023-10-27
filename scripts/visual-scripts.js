@@ -15,3 +15,19 @@ function navDisplay(){
     }
 
 }
+// displays hodes date input if liftetime selected in manage-products
+function dateDisplay(){
+    var checkbox = document.getElementById("date-checkbox");
+    var date = document.getElementById("date-button");
+    
+
+    
+    if (checkbox.checked) {
+        date.style.display = "none";
+        
+        
+    } else {
+        date.style.display = "block";
+    }
+
+}

@@ -51,9 +51,9 @@
             <div class="sn-form">
                 <form   action="#">
                     <div class="date-wrapper">
-                        <label>Expiry date: <br><input type="checkbox" name="lifetime"> lifetime</label>
+                        <label>Expiry date: <br><input id="date-checkbox" type="checkbox" name="lifetime" onclick="dateDisplay()"> lifetime</label>
                         <br>
-                        <label><input class="date-button" type="date" name="exp-date"></label>
+                        <label><input id="date-button" type="date" name="exp-date"></label>
                     </div>
                     <div class="amount-wrapper">
                         <label>Amount to generate: <br><input type="text" placeholder="00" name="generate-amount"></label>
