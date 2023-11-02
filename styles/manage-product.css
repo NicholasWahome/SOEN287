@@ -34,12 +34,10 @@
     letter-spacing: 5px;
 
 }
-#line{
-    /* margin-right: 25%; */
-}
 
 /* serial number button */
-.list-sn-button{
+.list-sn-button {
+    display: block;
     font-size: 30px;
     font-weight: 700;
     color: #F4F4F4;
@@ -55,6 +53,7 @@
     border: 3px solid;
     border-color: #F4F4F4;
 }
+
 .list-sn-button:hover{
     border: 3px solid;
     border-color: #89D5DD;
@@ -118,7 +117,7 @@
     font-size: large;
 }
 .amount-wrapper{
-    padding: 0% 0% 0% 0%;
+
     background-color: #F4F4F4;
     margin: 2% 2%;
     padding: 2%;
@@ -129,6 +128,7 @@
     padding:2%;
     background-color: #F4F4F4;
     font-size: large;
+    width: 20%;
 }
 .submit-wrapper{
     display:flex;
@@ -200,5 +200,16 @@
 
 
 @media (max-width: 768px) {
-
+    *{
+        font-size: 10px;
+    }
+    label{
+        font-size: 10px;
+    }
+    .submit-wrapper input{
+        font-size: 10px;
+    }
+    .right-info-container a{
+        font-size: 10px; 
+    }
 }
