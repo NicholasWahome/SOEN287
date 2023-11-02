@@ -1,244 +1,237 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Serial Number List</title>
-<link rel="stylesheet"text="text/css" href="/styles/listProvider.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-<link rel="stylesheet" href="/styles/global-styles.css" />
-<link rel="stylesheet" href="/styles/index.css" />
-<link rel="stylesheet" href="/styles/myAccount.css">
-<script src="../scripts/visual-scripts.js"></script>
-</head>
-<header>
-<!-- header banner -->
-<div class="main-banner">
-<div class="left-header-content">
-<div class="hamburger"> <a href="javascript:void(0);" onclick="navDisplay()">&#x2630;</a></div>
-<a class="name-wrapper" href="/index.html">GetSoft.</a>
-</div>
-<div class="right-header-content">
-<a class="login" href="#">login</a>
-<img class="login-icon" src="img/login-icon.png">
-</div>
-</div>
-<!-- expandable nav bar -->
-<div id="navbar">
-<nav>
-<ul>
-<li><a href="/pages/Myaccount/Myaccount.html">Client Account</a></li>
-<li><a href="#">Provider Account</a></li>
-<li><a href="#">Log-Out</a></li>
-</ul>
-</nav>
-</div>
-</header>
-<body>
-<h1>Serial Number List</h1>
-<div id ="search-bar"> Search for specific serial number
-<input type = text placeholder="Enter Serial Number..."></input>
-<i class="fas fa-filter"></i>
-</div>
-<br><br>
-<div id="dashboard-box">
-<ul>
-<li>Dashboard</li>
-<li>Account History</li>
-<li>Active subscriptions</li>
-<li>Saved Serial Numbers</li>
-<li>Manage Addresses</li>
-<li>Settings</li>
-<li>Log-Out</li>
-</ul>
-</div>
-<div id="list">
-<li>
-<strong id="providerName">Provider Name:</strong> ABC Software Co.
-<strong id="clientNameLabel">Client Name:</strong> John Doe
-<strong id="clientIDLabel">Client ID:</strong> 12345
-<strong id="serialNumberLabel">Serial Number:</strong> 123456789
-<ul class="details">
-<li>
-<strong id="softwareNameLabel">Software Name:</strong> Product A
-</li>
-<li>
-<strong id="purchaseDateLabel">Purchase Date:</strong> 2023-01-15
-</li>
-<li>
-<strong id="expiryDateLabel">Expiry Date:</strong> 2024-01-15
-</li>
-<li>
-<strong id="statusLabel">Status:</strong> Active
-</li>
-</ul>
-<br>
-<button onclick="blockSerialNumber('123456789')">Block</button>
-<button onclick="unblockSerialNumber('123456789')">Unblock</button>
-<a href="mailto:client@email.com">Contact Client</a>
-</li>
-<br>
-<!-- Additional list items -->
-<li>
-<strong id="providerName">Provider Name:</strong> XYZ Software Inc.
-<strong id="clientNameLabel">Client Name:</strong> Jane Smith
-<strong id="clientIDLabel">Client ID:</strong> 67890
-<strong id="serialNumberLabel">Serial Number:</strong> 987654321
-<ul class="details">
-<li>
-<strong id="softwareNameLabel">Software Name:</strong> Product B
-</li>
-<li>
-<strong id="purchaseDateLabel">Purchase Date:</strong> 2023-03-20
-</li>
-<li>
-<strong id="expiryDateLabel">Expiry Date:</strong> 2024-03-20
-</li>
-<li>
-<strong id="statusLabel">Status:</strong> Active
-</li>
-</ul>
-<br>
-<button onclick="blockSerialNumber('987654321')">Block</button>
-<button onclick="unblockSerialNumber('987654321')">Unblock</button>
-<a href="mailto:anotherclient@email.com">Contact Client</a>
-</li>
-<br>
-<!-- Additional list items -->
-<li>
-<strong id="providerName">Provider Name:</strong> PQR Software Ltd.
-<strong id="clientNameLabel">Client Name:</strong> Alice Johnson
-<strong id="clientIDLabel">Client ID:</strong> 54321
-<strong id="serialNumberLabel">Serial Number:</strong> 98712345
-<ul class="details">
-<li>
-<strong id="softwareNameLabel">Software Name:</strong> Product C
-</li>
-<li>
-<strong id="purchaseDateLabel">Purchase Date:</strong> 2023-04-10
-</li>
-<li>
-<strong id="expiryDateLabel">Expiry Date:</strong> 2024-04-10
-</li>
-<li>
-<strong id="statusLabel">Status:</strong> Active
-</li>
-</ul>
-<br>
-<button onclick="blockSerialNumber('98712345')">Block</button>
-<button onclick="unblockSerialNumber('98712345')">Unblock</button>
-<a href="mailto:thirdclient@email.com">Contact Client</a>
-<br>
-</li>
-<li>
-<strong id="providerName">Provider Name:</strong> ABC Software Co.
-<strong id="clientNameLabel">Client Name:</strong> John Doe
-<strong id="clientIDLabel">Client ID:</strong> 12345
-<strong id="serialNumberLabel">Serial Number:</strong> 123456789
-<ul class="details">
-<li>
-<strong id="softwareNameLabel">Software Name:</strong> Product A
-</li>
-<li>
-<strong id="purchaseDateLabel">Purchase Date:</strong> 2023-01-15
-</li>
-<li>
-<strong id="expiryDateLabel">Expiry Date:</strong> 2024-01-15
-</li>
-<li>
-<strong id="statusLabel">Status:</strong> Active
-</li>
-</ul>
-<br>
-<button onclick="blockSerialNumber('123456789')">Block</button>
-<button onclick="unblockSerialNumber('123456789')">Unblock</button>
-<a href="mailto:client@email.com">Contact Client</a>
-</li>
-<br>
-<li>
-<strong id="providerName">Provider Name:</strong> ABC Software Co.
-<strong id="clientNameLabel">Client Name:</strong> John Doe
-<strong id="clientIDLabel">Client ID:</strong> 12345
-<strong id="serialNumberLabel">Serial Number:</strong> 123456789
-<ul class="details">
-<li>
-<strong id="softwareNameLabel">Software Name:</strong> Product A
-</li>
-<li>
-<strong id="purchaseDateLabel">Purchase Date:</strong> 2023-01-15
-</li>
-<li>
-<strong id="expiryDateLabel">Expiry Date:</strong> 2024-01-15
-</li>
-<li>
-<strong id="statusLabel">Status:</strong> Active
-</li>
-</ul>
-<br>
-<button onclick="blockSerialNumber('123456789')">Block</button>
-<button onclick="unblockSerialNumber('123456789')">Unblock</button>
-<a href="mailto:client@email.com">Contact Client</a>
-</li>
-<br>
-<li>
-<strong id="providerName">Provider Name:</strong> ABC Software Co.
-<strong id="clientNameLabel">Client Name:</strong> John Doe
-<strong id="clientIDLabel">Client ID:</strong> 12345
-<strong id="serialNumberLabel">Serial Number:</strong> 123456789
-<ul class="details">
-<li>
-<strong id="softwareNameLabel">Software Name:</strong> Product A
-</li>
-<li>
-<strong id="purchaseDateLabel">Purchase Date:</strong> 2023-01-15
-</li>
-<li>
-<strong id="expiryDateLabel">Expiry Date:</strong> 2024-01-15
-</li>
-<li>
-<strong id="statusLabel">Status:</strong> Active
-</li>
-</ul>
-<br>
-<button onclick="blockSerialNumber('123456789')">Block</button>
-<button onclick="unblockSerialNumber('123456789')">Unblock</button>
-<a href="mailto:client@email.com">Contact Client</a>
-</li>
-<br>
-</div>
-</div>
-</body>
-<!-- footer section feel free to add your credit -->
-<footer>
-<div id="line">.</div>
-<div class="footer-info">
-<div class="credits-container">
-<div class="credit-1">
-<div class="credit-row">Oscar Mirontsuk</div>
-<div class="credit-row">40191431</div>
-<div class="credit-row">oscarm514123@gmail.com</div>
-</div>
-<div class="credit-2">
-<div class="credit-row">Nicholas Werugia</div>
-<div class="credit-row">40131956</div>
-<div class="credit-row">werugian@gmail.com</div>
-</div>
-<div class="credit-3">
-<div class="credit-row">Name</div>
-<div class="credit-row">student-id</div>
-<div class="credit-row">contact</div>
-</div>
-<div class="credit-4">
-<div class="credit-row">Name</div>
-<div class="credit-row">student-id</div>
-<div class="credit-row">contact</div>
-</div>
-
-
-</div>
-</div>
-<div class="logoBanner-wrapper">
-<a class="footerLogo" href="index.html">GetSoft.</a>
-</div>
-
-
-</footer>
+    <head>
+        <title>Serial Number List</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="stylesheet" href="/styles/global-styles.css" />
+        <link rel="stylesheet" href="/styles/myAccount.css">
+        <link rel="stylesheet" href="/styles/listProvider.css">
+        <script src="../scripts/visual-scripts.js"></script>
+    </head>
+    <header>
+        <!-- header banner -->
+        <div class="main-banner">
+            <div class="left-header-content">
+                <div class="hamburger"> <a href="javascript:void(0);" onclick="navDisplay()">&#x2630;</a></div>
+                <a class="name-wrapper" href="/index.html">GetSoft.</a>
+            </div>
+        </div>
+        <!-- expandable nav bar -->
+        <div id="navbar">
+            <nav>
+                <ul>
+                    <li><a href="/pages/Myaccount/Myaccount.html">Client Account</a></li>
+                    <li><a href="#">Provider Account</a></li>
+                    <li><a href="#">Log-Out</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <body>
+        <!--Search Bar-->
+        <div id ="search-bar"> Search for specific serial number
+            <input type = text placeholder="Enter Serial Number..." oninput=searchBar()></input>
+            <i class="fas fa-filter"></i>
+        </div>
+        <br>
+        <!--Side Bar-->
+        <div class="dashboardbox">
+                <ul id="ul">
+                    <li id="dashboard"><button id="defaultbutton">Dashboard</button></li>
+                    <li id="listt"><button id="defaultbutton">Account History</button></li>
+                    <li id="listt"><button id="defaultbutton">Active subscriptions</button></li>
+                    <li id="listt"><a href ="listProvider.html"><button id="defaultbutton">Saved Serial Numbers</button></a></li>
+                    <li id="listt"><button id="defaultbutton">Manage Addresses</button></li>
+                    <li id="listt"><button id="defaultbutton">Settings</button></li>
+                    <li id="logout"><button id="defaultbutton">Log-Out</button></li>
+                </ul>
+            </div>
+            <!--Start Of List-->
+            <div id="list">
+                <li>
+                    <strong id="providerName">Provider Name:</strong> ABC Software Co.
+                    <strong id="clientNameLabel">Client Name:</strong> John Doe
+                    <strong id="clientIDLabel">Client ID:</strong> 12345
+                    <strong id="serialNumberLabel">Serial Number:</strong> 123456789
+                    <ul class="details">
+                        <li>
+                            <strong id="softwareNameLabel">Software Name:</strong> Product A
+                        </li>
+                        <li>
+                            <strong id="purchaseDateLabel">Purchase Date:</strong> 2023-01-15
+                        </li>
+                        <li>
+                            <strong id="expiryDateLabel">Expiry Date:</strong> 2024-01-15
+                        </li>
+                        <li>
+                            <strong id="statusLabel">Status:</strong> Active
+                        </li>
+                    </ul>
+                    <br>
+                    <button onclick="blockSerialNumber('123456789')">Block</button>
+                    <button onclick="unblockSerialNumber('123456789')">Unblock</button>
+                    <a href="mailto:client@email.com">Contact Client</a>
+                </li>
+                <br>
+                <li>
+                    <strong id="providerName">Provider Name:</strong> XYZ Software Inc.
+                    <strong id="clientNameLabel">Client Name:</strong> Jane Smith
+                    <strong id="clientIDLabel">Client ID:</strong> 67890
+                    <strong id="serialNumberLabel">Serial Number:</strong> 987654321
+                    <ul class="details">
+                        <li>
+                            <strong id="softwareNameLabel">Software Name:</strong> Product B
+                        </li>
+                        <li>
+                            <strong id="purchaseDateLabel">Purchase Date:</strong> 2023-03-20
+                        </li>
+                        <li>
+                            <strong id="expiryDateLabel">Expiry Date:</strong> 2024-03-20
+                        </li>
+                        <li>
+                            <strong id="statusLabel">Status:</strong> Active
+                        </li>
+                    </ul>
+                    <br>
+                    <button onclick="blockSerialNumber('987654321')">Block</button>
+                    <button onclick="unblockSerialNumber('987654321')">Unblock</button>
+                    <a href="mailto:anotherclient@email.com">Contact Client</a>
+                </li>
+                <br>
+                <li>
+                    <strong id="providerName">Provider Name:</strong> PQR Software Ltd.
+                    <strong id="clientNameLabel">Client Name:</strong> Alice Johnson
+                    <strong id="clientIDLabel">Client ID:</strong> 54321
+                    <strong id="serialNumberLabel">Serial Number:</strong> 98712345
+                    <ul class="details">
+                        <li>
+                            <strong id="softwareNameLabel">Software Name:</strong> Product C
+                        </li>
+                        <li>
+                            <strong id="purchaseDateLabel">Purchase Date:</strong> 2023-04-10
+                        </li>
+                        <li>
+                            <strong id="expiryDateLabel">Expiry Date:</strong> 2024-04-10
+                        </li>
+                        <li>
+                            <strong id="statusLabel">Status:</strong> Active
+                        </li>
+                    </ul>
+                    <br>
+                    <button onclick="blockSerialNumber('98712345')">Block</button>
+                    <button onclick="unblockSerialNumber('98712345')">Unblock</button>
+                    <a href="mailto:thirdclient@email.com">Contact Client</a>
+                    <br>
+                </li>
+                <br>
+                <li>
+                    <strong id="providerName">Provider Name:</strong> ABC Software Co.
+                    <strong id="clientNameLabel">Client Name:</strong> John Doe
+                    <strong id="clientIDLabel">Client ID:</strong> 12345
+                    <strong id="serialNumberLabel">Serial Number:</strong> 123456789
+                    <ul class="details">
+                        <li>
+                            <strong id="softwareNameLabel">Software Name:</strong> Product A
+                        </li>
+                        <li>
+                            <strong id="purchaseDateLabel">Purchase Date:</strong> 2023-01-15
+                        </li>
+                        <li>
+                            <strong id="expiryDateLabel">Expiry Date:</strong> 2024-01-15
+                        </li>
+                        <li>
+                            <strong id="statusLabel">Status:</strong> Active
+                        </li>
+                        <br>
+                    </ul>
+                    <br>
+                    <button onclick="blockSerialNumber('123456789')">Block</button>
+                    <button onclick="unblockSerialNumber('123456789')">Unblock</button>
+                    <a href="mailto:client@email.com">Contact Client</a>
+                </li>
+                <br>
+                <li>
+                    <strong id="providerName">Provider Name:</strong> ABC Software Co.
+                    <strong id="clientNameLabel">Client Name:</strong> John Doe
+                    <strong id="clientIDLabel">Client ID:</strong> 12345
+                    <strong id="serialNumberLabel">Serial Number:</strong> 123456789
+                    <ul class="details">
+                        <li>
+                            <strong id="softwareNameLabel">Software Name:</strong> Product A
+                        </li>
+                        <li>
+                            <strong id="purchaseDateLabel">Purchase Date:</strong> 2023-01-15
+                        </li>
+                        <li>
+                            <strong id="expiryDateLabel">Expiry Date:</strong> 2024-01-15
+                        </li>
+                        <li>
+                            <strong id="statusLabel">Status:</strong> Active
+                        </li>
+                        <br>
+                    </ul>
+                    <br>
+                    <button onclick="blockSerialNumber('123456789')">Block</button>
+                    <button onclick="unblockSerialNumber('123456789')">Unblock</button>
+                    <a href="mailto:client@email.com">Contact Client</a>
+                </li>
+                <br>
+                <li>
+                    <strong id="providerName">Provider Name:</strong> ABC Software Co.
+                    <strong id="clientNameLabel">Client Name:</strong> John Doe
+                    <strong id="clientIDLabel">Client ID:</strong> 12345
+                    <strong id="serialNumberLabel">Serial Number:</strong> 123456789
+                    <ul class="details">
+                        <li>
+                            <strong id="softwareNameLabel">Software Name:</strong> Product A
+                        </li>
+                        <li>
+                            <strong id="purchaseDateLabel">Purchase Date:</strong> 2023-01-15
+                        </li>
+                        <li>
+                            <strong id="expiryDateLabel">Expiry Date:</strong> 2024-01-15
+                        </li>
+                        <li>
+                            <strong id="statusLabel">Status:</strong> Active
+                        </li>
+                    </ul>
+                    <br>
+                    <button onclick="blockSerialNumber('123456789')">Block</button>
+                    <button onclick="unblockSerialNumber('123456789')">Unblock</button>
+                    <a href="mailto:client@email.com">Contact Client</a>
+                </li>
+                <br>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <div id="line">.</div>
+        <div class="footer-info">
+            <div class="credits-container">
+                <div class="credit-1">
+                    <div class="credit-row">Oscar Mirontsuk</div>
+                    <div class="credit-row">40191431</div>
+                    <div class="credit-row">oscarm514123@gmail.com</div>
+                </div>
+                <div class="credit-2">
+                    <div class="credit-row">Nicholas Werugia</div>
+                    <div class="credit-row">40131956</div>
+                    <div class="credit-row">werugian@gmail.com</div>
+                </div>
+                <div class="credit-3">
+                    <div class="credit-row">Name</div>
+                    <div class="credit-row">student-id</div>
+                    <div class="credit-row">contact</div>
+                </div>
+                <div class="credit-4">
+                    <div class="credit-row">Name</div>
+                    <div class="credit-row">student-id</div>
+                    <div class="credit-row">contact</div>
+                </div>
+            </div>
+        </div>
+        <div class="logoBanner-wrapper">
+            <a class="footerLogo" href="index.html">GetSoft.</a>
+        </div>
+    </footer>
 </html>
