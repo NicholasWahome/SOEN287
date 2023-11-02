@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Provider Products - Getsoft</title>
+    <link rel="stylesheet" href="../styles/global-styles.css" />
+    <link rel="stylesheet" href="../styles/manage-product.css" />
+
+</head>
+<body>
+    <header>
+        <!-- header banner -->
+        <div class="main-banner">
+            <div class="left-header-content">
+                <div class="hamburger"> <a href="javascript:void(0);" onclick="navDisplay()">&#x2630;</a></div>
+                <a class="name-wrapper" href="../index.html">GetSoft.</a>
+            </div>
+            <div class="right-header-content">
+                <a class="login" href="#">login</a>
+                <img class="login-icon" src="../img/login-icon.png">
+            </div>
+        </div>
+        <!-- expandable nav bar -->
+        <div id="navbar">
+            <nav>
+                <ul>
+                    <li><a href="#">Client Account</a></li>
+                    <li><a href="#">Provider Account</a></li>
+                    <li><a href="#">Log-Out</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- main content -->
+    <div class="page-content-wraper">
+        <div class="product-info">
+            <!-- product information -->
+            <div class="image-wrapper">
+                <img src="../img/products/Fl_studio_logo.png" alt="Flstudio">
+            </div>
+            <div class="right-info-container">
+                <div id= "p-name" class="product-name">Fl Studio - Fruity Edition</div>
+                <div id="line"></div>
+                <div class="list-sn-button">List Serial Numbers</div>
+            </div>
+        </div>
+        <!-- serial number generation -->
+        <div class="generate-sn">
+            <div class="sn-form">
+                <form  id="serial-num-form" action="#">
+                    <div class="date-wrapper">
+                        <label>Expiry date: <br><input id="date-checkbox" type="checkbox" name="lifetime" onclick="dateDisplay()"> lifetime</label>
+                        <br>
+                        <label><input id="date-button" type="date" name="exp"></label>
+                    </div>
+                    <div class="amount-wrapper">
+                        <label>Amount to generate: <br><input type="text" placeholder="00" name="amnt"></label>
+                    </div>
+                    <div class="submit-wrapper">
+                        <input type="reset" value="Reset">
+                        <a id="view" onclick="display()">View</a>
+                        <input type="submit" value="Generate Serial numbers(s)">
+                    </div>
+                </form>
+            </div>
+        
+            <div class="sn-output">
+                Serial Numbers will display here:
+                <div class="outline-box">    
+                    <div id="sn-display"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+   
+
+<!-- footer section feel free to add your credit -->
+<footer>
+    <div id="line">.</div>
+    <div class="footer-info">
+        <div class="credits-container">
+            <div class="credit-1">
+                <div class="credit-row">Oscar Mirontsuk</div>
+                <div class="credit-row">40191431</div>
+                <div class="credit-row">oscarm514123@gmail.com</div>
+            </div>
+            <div class="credit-2">
+                <div class="credit-row">Name</div>
+                <div class="credit-row">student-id</div>
+                <div class="credit-row">contact</div>
+            </div>
+            <div class="credit-3">
+                <div class="credit-row">Name</div>
+                <div class="credit-row">student-id</div>
+                <div class="credit-row">contact</div>
+            </div>
+            <div class="credit-4">
+                <div class="credit-row">Name</div>
+                <div class="credit-row">student-id</div>
+                <div class="credit-row">contact</div>
+            </div>
+
+        </div>
+    </div>
+    <div class="logoBanner-wrapper">   
+        <a class="footerLogo" href="index.html">GetSoft.</a>
+    </div> 
+
+</footer>
+
+
+    <!-- scripts -->
+    <script src="../scripts/visual-scripts.js"></script> 
+    <script src="../scripts/serial-number-generation.js"></script>
+</body>
+
+</html>

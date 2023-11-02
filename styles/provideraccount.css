@@ -11,11 +11,6 @@ font-size: large;
 margin-left: 6.5%;
 margin-top: 3%; 
 }
-.content 
-{
-    display: none; /* Initially hide all content */
-    
-}
 .container
 {
     width: 92%;
@@ -23,21 +18,9 @@ margin-top: 3%;
     margin-left: 6.5%;
     margin-top: 2%;
 }
-
-
 .containerrow
 {
     display:table-row;
-}
-.buttonlink
-{
-    background: none;
-    border: none;
-    color: black;
-    cursor: pointer;
-    font-family:"Rubik" ;
-    padding-left: 2.5%;
-    font-size:16px;
 }
 
 .dashboardbox
@@ -55,12 +38,11 @@ margin-right: 2%;
 margin-left: 1%;
 list-style: none;
 }
-#dashboardcont
+.dashboardcontent
 {
 display:table-cell;
 width:80%;
 font-family: "Rubik", Helvetica;
-margin-left:20%;
 }
 #organizecontent
 {
@@ -72,27 +54,27 @@ margin-left:20%;
     margin: 2%,2%;
 }
 
-#lastproducts
+.dashboardcontent #lastproducts
 {
     color:white;
     
 
    
 }
- #lastpurchase
+.dashboardcontent #lastpurchase
 {
     color:white;
  
    
 }
-#Accountinfo
+.dashboardcontent #Accountinfo
 {
     color:white;
     margin-top: 29.5%;
     
 }
 
-#Addressbook
+.dashboardcontent #Addressbook
 {
     color:white;
     margin-top: 16%;
@@ -105,7 +87,7 @@ margin-left:20%;
 {
     padding-left:20%;
 }
-.Highlight
+#defaultbutton
 {
     background: none;
     border: none;
@@ -115,14 +97,6 @@ margin-left:20%;
     
 }
 #Editbutton
-{
-    background: none;
-    border: none;
-    color: white;
-    text-decoration: underline;
-    cursor: pointer;
-}
-#deleteid
 {
     background: none;
     border: none;
@@ -169,32 +143,9 @@ font-weight: bold;
 {
 padding-top: 40%;
 }
- #title
+.dashboardcontent #title
 {
 color: white;
 }
-.managingaddress
-{
-    font-family: "Rubik";
-    color:white;
-}
-#ManageAddress
-{
-    margin-left: 20%;
-    margin-bottom: 30%;
-}
-#Setting
-{
-    color: white;
-    margin-left: 20%;
-    font-family: "Rubik";
-}
-.settingcontainer
-{
-    color: white;
-    margin-top: 3%;
-    font-family: "Rubik";
-}
-
 
 

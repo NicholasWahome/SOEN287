@@ -1,0 +1,204 @@
+/* page layout */
+.page-content-wraper{
+    margin: 2% 10% 0% 10%;
+
+}
+
+/* top product info section */
+.product-info{
+    overflow: hidden;
+    /* background-color: rgba(255, 0, 0, 0.329); */
+    color:white;
+    display: flex;
+    text-align: left  ;
+}
+.image-wrapper{
+    width: 25%;
+}
+.image-wrapper img{
+    max-width: 100%;
+   align-items: center;
+}
+.right-info-container{
+
+
+    margin: 0% 0% 0% 2%;
+    width: 100%;
+}
+.product-name{
+    padding-left: 2%;
+
+    font-family: "Rubik-Mono-One";
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 5px;
+
+}
+#line{
+    /* margin-right: 25%; */
+}
+
+/* serial number button */
+.list-sn-button{
+    font-size: 30px;
+    font-weight: 700;
+    color: #F4F4F4;
+    font-family: "Rubik";
+    cursor: pointer;
+
+    border-radius: 10px;
+    
+    margin: 5% 25% 5% 1%;
+    padding: 5% 12%;
+    transition-duration: 0.4s;
+
+    border: 3px solid;
+    border-color: #F4F4F4;
+}
+.list-sn-button:hover{
+    border: 3px solid;
+    border-color: #89D5DD;
+    background-color:#89D5DD;
+    box-shadow:4px 4px 5px 0px #219caa inset, 0px 0px 0px 5px #89D5DD;
+    color: #001e38;
+    font-weight: 800;
+}
+
+
+
+/* serial number section */
+.generate-sn{
+
+    display: grid;
+    grid-template-columns: 75% auto;
+
+    font-size: 25px;
+    font-weight: 200;
+    color: #000000;
+    font-family: "Rubik";
+
+    
+    
+    
+}
+.sn-form{
+    display: block;
+    height: fit-content;
+    font-size: 25px;
+    font-weight: 300;
+    border-radius: 10px;
+    margin: 2%;
+    
+    border: 3px solid;
+    border-color: #F4F4F4;
+
+}
+.sn-form input{
+    font-family: "Rubik";
+
+    
+}
+
+
+.date-wrapper{
+    background-color: #F4F4F4;
+    margin: 2%;
+
+    padding: 2%;
+    border-radius: 5px;
+    box-shadow:4px 4px 10px 0px #F4F4F4
+
+}
+.date-wrapper #date-button{
+    display: block;
+    width: 50%;
+    padding: 2% 2% 2% 2%;
+    border-radius: 5px;
+    background-color: #F4F4F4;
+    font-size: large;
+}
+.amount-wrapper{
+    padding: 0% 0% 0% 0%;
+    background-color: #F4F4F4;
+    margin: 2% 2%;
+    padding: 2%;
+    border-radius: 5px;
+    box-shadow:4px 4px 10px 0px #f4f4f4
+}
+.amount-wrapper input{
+    padding:2%;
+    background-color: #F4F4F4;
+    font-size: large;
+}
+.submit-wrapper{
+    display:flex;
+}
+.submit-wrapper input, .submit-wrapper a{
+    font-size: 20px;
+    margin:  0% 2% 2% 2%;
+    width:96%;
+    padding: 2%;
+    box-shadow:4px 4px 10px 0px #f4f4f4;
+    background-color: #000000;
+    color:#F4F4F4;
+    transition-duration: 0.4s;
+    border-radius: 5px;
+    border: 3px solid;
+    border-color: #f4f4f4;
+
+}
+.submit-wrapper input:hover, .submit-wrapper a:hover{
+    border: 3px solid;
+    border-color: #89D5DD;
+    background-color:#89D5DD;
+    box-shadow:4px 4px 5px 0px #219caa inset, 0px 0px 0px 5px #89D5DD;
+    color: #001e38;
+    font-weight: 800;
+}
+
+/* serial number display */
+.sn-output{
+    display: block;
+    background-color: #F4F4F4;
+    margin: 2% 2%;
+    padding: 2%;
+    border-radius: 5px;
+    box-shadow:4px 4px 10px 0px #f4f4f4;
+    font-size: 15px;
+    font-weight: 600;
+    width: 100%;
+    overflow: hidden;
+}
+.outline-box{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.082);
+    height: 85%;
+    width: 84%;
+    padding: 5% 5%;
+    margin: 2%;
+
+    border-radius: 5px;
+    border: 3px solid;
+    border-color: #000000;
+    box-shadow:4px 4px 10px 0px #0000005d;
+}
+#sn-display{
+
+    color: #ff0000;
+    background-color: #000000;
+    margin: 1%;
+    padding: 5% 2%;
+    border-radius: 5px;
+    font-size: 10px;
+    word-wrap: break-word;
+    width: 100%;
+    overflow-x: scroll;
+    white-space: nowrap
+
+}
+
+
+
+@media (max-width: 768px) {
+
+}
