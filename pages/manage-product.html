@@ -41,7 +41,7 @@
                 <img src="../img/products/Fl_studio_logo.png" alt="Flstudio">
             </div>
             <div class="right-info-container">
-                <div class="product-name">Fl Studio - Fruity Edition</div>
+                <div id= "p-name" class="product-name">Fl Studio - Fruity Edition</div>
                 <div id="line"></div>
                 <div class="list-sn-button">List Serial Numbers</div>
             </div>
@@ -49,23 +49,28 @@
         <!-- serial number generation -->
         <div class="generate-sn">
             <div class="sn-form">
-                <form   action="#">
+                <form  id="serial-num-form" action="#">
                     <div class="date-wrapper">
                         <label>Expiry date: <br><input id="date-checkbox" type="checkbox" name="lifetime" onclick="dateDisplay()"> lifetime</label>
                         <br>
-                        <label><input id="date-button" type="date" name="exp-date"></label>
+                        <label><input id="date-button" type="date" name="exp"></label>
                     </div>
                     <div class="amount-wrapper">
-                        <label>Amount to generate: <br><input type="text" placeholder="00" name="generate-amount"></label>
+                        <label>Amount to generate: <br><input type="text" placeholder="00" name="amnt"></label>
                     </div>
                     <div class="submit-wrapper">
+                        <input type="reset" value="Reset">
+                        <a id="view" onclick="display()">View</a>
                         <input type="submit" value="Generate Serial numbers(s)">
                     </div>
                 </form>
             </div>
         
             <div class="sn-output">
-                q
+                Serial Numbers will display here:
+                <div class="outline-box">    
+                    <div id="sn-display"></div>
+                </div>
             </div>
         </div>
 
@@ -113,6 +118,7 @@
 
     <!-- scripts -->
     <script src="../scripts/visual-scripts.js"></script> 
+    <script src="../scripts/serial-number-generation.js"></script>
 </body>
 
 </html>

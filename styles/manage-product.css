@@ -130,21 +130,24 @@
     background-color: #F4F4F4;
     font-size: large;
 }
-.submit-wrapper input{
+.submit-wrapper{
+    display:flex;
+}
+.submit-wrapper input, .submit-wrapper a{
     font-size: 20px;
     margin:  0% 2% 2% 2%;
     width:96%;
     padding: 2%;
-    box-shadow:4px 4px 10px 0px #F4F4F4;
+    box-shadow:4px 4px 10px 0px #f4f4f4;
     background-color: #000000;
     color:#F4F4F4;
     transition-duration: 0.4s;
     border-radius: 5px;
     border: 3px solid;
-    border-color: #F4F4F4;
+    border-color: #f4f4f4;
 
 }
-.submit-wrapper input:hover{
+.submit-wrapper input:hover, .submit-wrapper a:hover{
     border: 3px solid;
     border-color: #89D5DD;
     background-color:#89D5DD;
@@ -153,13 +156,47 @@
     font-weight: 800;
 }
 
-
-
-
+/* serial number display */
 .sn-output{
-    background-color: #8315157e;
+    display: block;
+    background-color: #F4F4F4;
+    margin: 2% 2%;
+    padding: 2%;
+    border-radius: 5px;
+    box-shadow:4px 4px 10px 0px #f4f4f4;
+    font-size: 15px;
+    font-weight: 600;
+    width: 100%;
+    overflow: hidden;
+}
+.outline-box{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.082);
+    height: 85%;
+    width: 84%;
+    padding: 5% 5%;
+    margin: 2%;
+
+    border-radius: 5px;
+    border: 3px solid;
+    border-color: #000000;
+    box-shadow:4px 4px 10px 0px #0000005d;
+}
+#sn-display{
+
+    color: #ff0000;
+    background-color: #000000;
+    margin: 1%;
+    padding: 5% 2%;
+    border-radius: 5px;
+    font-size: 10px;
+    word-wrap: break-word;
+    width: 100%;
+    overflow-x: scroll;
+    white-space: nowrap
 
 }
+
 
 
 @media (max-width: 768px) {
