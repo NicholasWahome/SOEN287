@@ -1,6 +1,6 @@
 window.onload = function() {
     // Find the button element you want to be prepressed.
-    var button = document.getElementById("defaultbutton");
+    var button = document.getElementById("defaultbutton-button");
     
     // Simulate a button click by triggering the click event.
     button.click();

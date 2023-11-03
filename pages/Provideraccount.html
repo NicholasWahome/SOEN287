@@ -6,7 +6,7 @@
 <title>MyAccount</title>
 <link rel="stylesheet" href="/styles/global-styles.css" />
 <link rel="stylesheet" href="/styles/index.css" />
-<link rel="stylesheet" href="/styles/myAccount.css">
+<link rel="stylesheet" href="/styles/provideraccount.css">
 <script src="/scripts/visual-scripts.js\"></script>
 <script src="/scripts/custaccount.js"></script>
 </head>
@@ -39,20 +39,26 @@
     <h1>Hello, Provider</h1>
     </div>
  </div>
+
+  <!--Container storing the side bar and content-->
 <div class="container">
     <div class="containerrow">
+    <div class="dashboardcontainer">
     <div class="dashboardbox">
         <ul id="ul">
-            <li id="dashboard"><button id="defaultbutton-button" class="Highlight" onclick="showMaterial('dashboardcont')">Dashboard</button></li> 
+            <li id="dashboard"><button id="defaultbutton-button" class="buttonlink" onclick="showMaterial('dashboardcont')">Dashboard</button></li> 
             <!-- <li id="listt"><a href='manage-product.html' class="buttonlink">Generate Serial Numbers</a></li> -->
             <li id="listt"><a href="/pages/distributed-software.html" class="buttonlink">Distributed Softwares</a></li>
             <!-- <li id="listt"><a href='listProvider.html' class="buttonlink">List of Products</a></li> -->
-            <li id="listt"><button id="ManageADD-button" class="Highlight" onclick="showMaterial('ManageAddress')">Manage Addresses</button></li>
-            <li id="listt"><button id="Settings-button" class="Highlight" onclick="showMaterial('Setting')">Settings</button></li>
+            <li id="listt"><button id="ManageADD-button" class="buttonlink" onclick="showMaterial('ManageAddress')">Manage Addresses</button></li>
+            <li id="listt"><button id="Settings-button" class="buttonlink" onclick="showMaterial('Setting')">Settings</button></li>
             <li id="logout"><a href='login.html' class="buttonlink">Log-Out</a></li>
         </ul>
  </div>
+ </div>
 
+ <!--Display content of tab clicked-->
+ <div class="Displaycontent">
  <div id="dashboardcont" class="content">
     <h2 id="title">Dashboard</h2>
     
@@ -100,13 +106,11 @@
         </td>
                 </tr>
             </table>
-        </div>
-        </td>
-        </tr>
     </table>
     </div>
+        <!--Display content for managing addresses-->
     <div id="ManageAddress" class="content">
-        
+        <h2>Account Settings</h2>
         <table>
             <tr>
                 <td>
@@ -133,6 +137,7 @@
         </table>
         
     </div>
+    <!--Display content for setting tab-->
     <div id="Setting" class="content">
         <h2>Account Settings</h2>
         <div class="settingcontainer">
@@ -143,8 +148,6 @@
             <p>Phone: +123456</p>
             <br>
             <p>Date of birth</p>
-            <br>
-            <p>Gender: Male?</p>
             <br>
             <p>Password: ********</p>
             <br>
@@ -163,7 +166,7 @@
 
  
 
-
+<!--Footer-->
  <footer>
     <div id="line">.</div>
     <div class="footer-info">

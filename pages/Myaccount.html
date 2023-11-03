@@ -36,22 +36,28 @@
     </header>
  <div class="account desc">
     <div id="greet">
-    <h1>Hello, Joe mama</h1>
+    <h1>Hello, Joe </h1>
     </div>
  </div>
+ <!--Container storing the side bar and content-->
 <div class="container">
     <div class="containerrow">
+    <div class="dashboardcontainer">
     <div class="dashboardbox">
         <ul id="ul">
-            <li id="dashboard"><button id="defaultbutton-button" class="Highlight" onclick="showMaterial('dashboardcont')">Dashboard</button></li> 
-            <li id="listt"><button id="AddS#-button" class="Highlight" onclick="showMaterial('search')">Add Serial Number</button></li>
+            <!--Side bar-->
+            <li id="dashboard"><button id="defaultbutton-button" class="buttonlink" onclick="showMaterial('dashboardcont')">Dashboard</button></li> 
+            <li id="listt"><button id="AddS#-button" class="buttonlink" onclick="showMaterial('search')">Add Serial Number</button></li>
             <li id="listt"><a href='listCustomer.html' class="buttonlink">Saved Serial Numbers</a></li>
-            <li id="listt"><button id="ManageADD-button" class="Highlight" onclick="showMaterial('ManageAddress')">Manage Addresses</button></li>
-            <li id="listt"><button id="Settings-button" class="Highlight" onclick="showMaterial('Setting')">Settings</button></li>
+            <li id="listt"><button id="ManageADD-button" class="buttonlink" onclick="showMaterial('ManageAddress')">Manage Addresses</button></li>
+            <li id="listt"><button id="Settings-button" class="buttonlink" onclick="showMaterial('Setting')">Settings</button></li>
             <li id="logout"><a href="/pages/login.html" class="buttonlink">Log-Out</a></li>
         </ul>
  </div>
+ </div>
 
+<!--Display content of tab clicked-->
+<div class="Displaycontent">
  <div id="dashboardcont" class="content">
     <h2 id="title">Dashboard</h2>
     
@@ -65,7 +71,7 @@
                 <p>Product Name: Something</p>
                 <bre>
                 <p>Serail Number:9162h9ho</p>
-                <p>Date Purchased: 5/12/2021
+                <p>Date Purchased: 5/12/2021</p>
             </div>
         </div>
         </td>
@@ -77,7 +83,7 @@
                     <p>Product Name: Something</p>
                     <bre>
                     <p>Serail Number:9162h9ho</p>
-                    <p>Date Purchased: 5/12/2021
+                    <p>Date Purchased: 5/12/2021</p>
                 </div>
             </div>
         </td>
@@ -88,8 +94,8 @@
             <h3>Account Information</h3>
             <div id="line"></div>
             <h4>Contact Information</h4>
-            <p>Joe Mama</p>
-            <p>Joemama420@gmail.com</p>
+            <p>Joe Lindner</p>
+            <p>JoeLindner420@gmail.com</p>
             <p>123456</p>
             <br>
             <button id="Editbutton">Edit</button>
@@ -106,8 +112,8 @@
                     <td>
                         <div id="Billingbox">
                         <h4>Billing Address</h4>
-                        <p>Joe mama</p>
-                        <p>Joemama420@gmail.com</p>
+                        <p>Joe Lindner</p>
+                        <p>JoeLindner420@gmail.com</p>
                         <p>+123456</p>
                         <br>
                         <button id="editaddress">Edit Address</button>
@@ -116,8 +122,8 @@
                     <td>
                         <div id="shippingbox">
                         <h4>Shipping Address</h4>
-                        <p>Joe mama</p>
-                        <p>Joemama420@gmail.com</p>
+                        <p>Joe Lindner</p>
+                        <p>JoeLindner420@gmail.com</p>
                         <p>+123456</p>
                         <br>
                         <button id="editaddress">Edit Address</button>
@@ -130,15 +136,21 @@
         </tr>
     </table>
     </div>
+    <!--Display Content of Adding serial Numbers-->
     <div id="search"class="content">
-        <form>
+        <div id="serialsearch">
+        <form action="" method="get" class="searchbar">
             <h2>Add Serial Number</h2>
-            <input type="text" id="searchbar" placeholder="3A5B6SOFTHARD">
-            <input type="submit" value="Add Serial Number"id="adds#">
+            <br/>
+            <input type="text" placeholder="3A5B6SOFTHARD">
+            <button id="addserialNO">Add</button>
         </form>
+        </div>
     </div>
+
+    <!--Display content for managing addresses-->
     <div id="ManageAddress" class="content">
-        
+        <h2>Account Settings</h2>
         <table>
             <tr>
                 <td>
@@ -165,12 +177,13 @@
         </table>
         
     </div>
+    <!--Display content for setting tab-->
     <div id="Setting" class="content">
         <h2>Account Settings</h2>
         <div class="settingcontainer">
-            <p>Name: Joe Mama</p>        
+            <p>Name: Joe </p>        
             <br>
-            <p>Email:Joemama420@gmail.com</p>
+            <p>Email:Joe420@gmail.com</p>
             <br>
             <p>Phone: +123456</p>
             <br>
@@ -180,20 +193,19 @@
             <br>
             <button id="Editbutton">Edit</button>
             <button id="passbutton">Change password</button>
-            <button id="deleteid">Delete Account</button>
-            
+            <button id="deleteid">Delete Account</button> 
         </div>
         
     </div>
     </div>
     </div>
- </div>
+    </div>
  
 
 
  
 
-
+<!--Footer-->
  <footer>
     <div id="line">.</div>
     <div class="footer-info">
