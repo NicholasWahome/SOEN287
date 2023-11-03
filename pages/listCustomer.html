@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="/styles/myAccount.css">
         <link rel="stylesheet" href="/styles/listCustomer.css">
         <script src="../scripts/visual-scripts.js"></script>
+        <script src="/scripts/custaccount.js"></script>
     </head>
     <header>
         <!-- header banner -->
@@ -38,12 +39,11 @@
         <div class="dashboardbox">
                 <ul id="ul">
                     <li id="dashboard"><button id="defaultbutton-button" class="Highlight" onclick="showMaterial('dashboardcont')">Dashboard</button></li> 
-                    <li id="listt"><a href='manage-product.html' class="buttonlink">Generate Serial Numbers</a></li>
-                    <li id="listt"><a href='listProvider.html' class="buttonlink">Distributed Softwares</a></li>
-                    <li id="listt"><a href='listProvider.html' class="buttonlink">List of Products</a></li>
+                    <li id="listt"><button id="AddS#-button" class="Highlight" onclick="showMaterial('search')">Add Serial Number</button></li>
+                    <li id="listt"><a href='listCustomer.html' class="buttonlink">Saved Serial Numbers</a></li>
                     <li id="listt"><button id="ManageADD-button" class="Highlight" onclick="showMaterial('ManageAddress')">Manage Addresses</button></li>
                     <li id="listt"><button id="Settings-button" class="Highlight" onclick="showMaterial('Setting')">Settings</button></li>
-                    <li id="logout"><a href='login.html' class="buttonlink">Log-Out</a></li>
+                    <li id="logout"><a href="/pages/login.html" class="buttonlink">Log-Out</a></li>
                 </ul>
             </div>
         <!--Start Of List-->
