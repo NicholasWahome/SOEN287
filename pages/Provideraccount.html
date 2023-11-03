@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GetSoft</title>
-    <link rel="stylesheet" href="/styles/global-styles.css" />
-    <link rel="stylesheet" href="/styles/index.css" />
-    <link rel="stylesheet" href="/styles/provideraccount.css">
-    <script src="../scripts/visual-scripts.js"></script>
-
+<meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MyAccount</title>
+<link rel="stylesheet" href="/styles/global-styles.css" />
+<link rel="stylesheet" href="/styles/index.css" />
+<link rel="stylesheet" href="/styles/myAccount.css">
+<script src="/scripts/visual-scripts.js\"></script>
+<script src="/scripts/custaccount.js"></script>
 </head>
 <body>
     <header>
@@ -19,8 +19,8 @@
                 <a class="name-wrapper" href="/index.html">GetSoft.</a>
             </div>
             <div class="right-header-content">
-                <a class="login" href="#">login</a>
-                <img class="login-icon" src="img/login-icon.png">
+                <a class="login" href='login.html'>login</a>
+                <img class="login-icon" src='login-icon.png'>
             </div>
         </div>
         <!-- expandable nav bar -->
@@ -29,55 +29,56 @@
                 <ul>
                     <li><a href="/pages/Myaccount.html">Client Account</a></li>
                     <li><a href="/pages/Provideraccount.html">Provider Account</a></li>
-                    <li><a href="#">Log-Out</a></li>
+                    <li><a href="login.html">Log-Out</a></li>
                 </ul>
             </nav>
         </div>
     </header>
  <div class="account desc">
     <div id="greet">
-    <h1>Hello, Joe mama</h1>
+    <h1>Hello, Provider</h1>
     </div>
  </div>
 <div class="container">
     <div class="containerrow">
     <div class="dashboardbox">
         <ul id="ul">
-            <li id="dashboard"><button id="defaultbutton">Dashboard</button></li> 
-            <li id="listt"><button id="defaultbutton"><a></a>Account History</button></li>
-            <li id="listt"><button id="defaultbutton">Active subscriptions</button></li>
-            <li id="listt"><a href ="listProvider.html"><button id="defaultbutton">Saved Serial Numbers</button></a></li>
-            <li id="listt"><button id="defaultbutton">Manage Addresses</button></li>
-            <li id="listt"><button id="defaultbutton">Settings</button></li>
-            <li id="logout"><button id="defaultbutton">Log-Out</button></li>
+            <li id="dashboard"><button id="defaultbutton-button" class="Highlight" onclick="showMaterial('dashboardcont')">Dashboard</button></li> 
+            <li id="listt"><a href='manage-product.html' class="buttonlink">Generate Serial Numbers</a></li>
+            <li id="listt"><a href='listProvider.html' class="buttonlink">Distributed Softwares</a></li>
+            <li id="listt"><a href='listProvider.html' class="buttonlink">List of Products</a></li>
+            <li id="listt"><button id="ManageADD-button" class="Highlight" onclick="showMaterial('ManageAddress')">Manage Addresses</button></li>
+            <li id="listt"><button id="Settings-button" class="Highlight" onclick="showMaterial('Setting')">Settings</button></li>
+            <li id="logout"><a href='login.html' class="buttonlink">Log-Out</a></li>
         </ul>
  </div>
 
- <div class="dashboardcontent">
+ <div id="dashboardcont" class="content">
     <h2 id="title">Dashboard</h2>
+    
     <table id="organizecontent">
         <tr>
             <td>
         <div id="lastproducts">
-            <h3>Last Purchase</h3>
+            <h3>Last customer</h3>
             <div id="line"></div>
             <div id="purchase">
-                <p>Product Name: Something</p>
+                <p>Customer Name:</p>
                 <bre>
-                <p>Serail Number:9162h9ho</p>
-                <p>Date Purchased: 5/12/2021
+                <p>Product Purchased: </p>
+                <p>Serial Number</p>
             </div>
         </div>
         </td>
         <td>
             <div id="lastpurchase">
-                <h3>Last Purchase</h3>
+                <h3>Previous Customer</h3>
                 <div id="line"></div>
                 <div id="purchase">
-                    <p>Product Name: Something</p>
+                    <p>Customer Name:</p>
                     <bre>
-                    <p>Serail Number:9162h9ho</p>
-                    <p>Date Purchased: 5/12/2021
+                    <p>Product Purchased: </p>
+                    <p>Serial Number</p>
                 </div>
             </div>
         </td>
@@ -97,33 +98,6 @@
 
         </div>
         </td>
-        <td>
-            <div id="Addressbook">
-                <h3>Address Book</h3>
-            <div id="line"></div>
-        
-            <table>
-                <tr>
-                    <td>
-                        <div id="Billingbox">
-                        <h4>Billing Address</h4>
-                        <p>Joe mama</p>
-                        <p>Joemama420@gmail.com</p>
-                        <p>+123456</p>
-                        <br>
-                        <button id="editaddress">Edit Address</button>
-                        </div>
-                    </td>
-                    <td>
-                        <div id="shippingbox">
-                        <h4>Shipping Address</h4>
-                        <p>Joe mama</p>
-                        <p>Joemama420@gmail.com</p>
-                        <p>+123456</p>
-                        <br>
-                        <button id="editaddress">Edit Address</button>
-                        </div>
-                    </td>
                 </tr>
             </table>
         </div>
@@ -131,8 +105,60 @@
         </tr>
     </table>
     </div>
+    <div id="ManageAddress" class="content">
+        
+        <table>
+            <tr>
+                <td>
+                    <div id="Billingbox" class="managingaddress">
+                    <h4>Billing Address</h4>
+                    <p>Joe mama</p>
+                    <p>Joemama420@gmail.com</p>
+                    <p>+123456</p>
+                    <br>
+                    <button id="editaddress">Edit Address</button>
+                    </div>
+                </td>
+                <td>
+                    <div id="shippingbox" class="managingaddress">
+                    <h4>Shipping Address</h4>
+                    <p>Joe mama</p>
+                    <p>Joemama420@gmail.com</p>
+                    <p>+123456</p>
+                    <br>
+                    <button id="editaddress" onclick="showMaterial(changeadress)">Edit Address</button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        
+    </div>
+    <div id="Setting" class="content">
+        <h2>Account Settings</h2>
+        <div class="settingcontainer">
+            <p>Name: Joe Mama</p>        
+            <br>
+            <p>Email:Joemama420@gmail.com</p>
+            <br>
+            <p>Phone: +123456</p>
+            <br>
+            <p>Date of birth</p>
+            <br>
+            <p>Gender: Male?</p>
+            <br>
+            <p>Password: ********</p>
+            <br>
+            <button id="Editbutton">Edit</button>
+            <button id="passbutton">Change password</button>
+            <button id="deleteid">Delete Account</button>
+            
+        </div>
+        
+    </div>
+    </div>
+    </div>
  </div>
- </div>
+ 
 
 
  
@@ -163,8 +189,11 @@
                 <div class="credit-row">umar.akahyd@gmail.com</div>
             </div> 
     </div>
-    <div class="logoBanner-wrapper">   
-        <a class="footerLogo" href="/index.html">GetSoft.</a>
-    </div> 
-
+    <div class="logoBanner-wrapper">
+        <a class="footerLogo" href='index.html'>GetSoft.</a>
+    </div>
 </footer>
+</html>
+
+
+
