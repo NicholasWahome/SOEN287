@@ -3,6 +3,7 @@
 
 
 /*Dashboard*/
+
 #greet
 {
 color: white;
@@ -29,6 +30,7 @@ margin-top: 3%;
 {
     display:table-row;
 }
+
 .buttonlink
 {
     background: none;
@@ -96,24 +98,13 @@ margin-left:20%;
 {
     color:white;
     margin-top: 16%;
-    
- 
-    
 }
 
 #shippingbox
 {
     padding-left:20%;
 }
-.Highlight
-{
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-family:"Rubik" ;
-    font-size:16px;
-    
-}
+
 #Editbutton
 {
     background: none;
@@ -181,7 +172,7 @@ color: white;
 #ManageAddress
 {
     margin-left: 20%;
-    margin-bottom: 30%;
+    margin-bottom: 15%;
 }
 #Setting
 {
@@ -194,6 +185,32 @@ color: white;
     color: white;
     margin-top: 3%;
     font-family: "Rubik";
+}
+
+#search{
+    color: white;
+    margin-left: 20%;
+    margin-bottom: 20%;
+    font-family: "Rubik";
+}
+#searchbar{
+    padding-left:50%;
+    height: 50%;
+    text-align: center;
+    font-family: "Rubik";
+}
+.Highlight
+{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family:"Rubik" ;
+    font-size:16px;
+    
+}
+.selected-button 
+{
+   font-weight: bold;
 }
 
 

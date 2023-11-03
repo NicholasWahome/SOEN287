@@ -43,17 +43,18 @@
     <div class="containerrow">
     <div class="dashboardbox">
         <ul id="ul">
-            <li id="dashboard"><button id="defaultbutton" class="Highlight" onclick="showMaterial('dashboardcont')">Dashboard</button></li> 
-            <li id="listt"><a href=# class="buttonlink">Active subscriptions</a></li>
+            <li id="dashboard"><button id="defaultbutton-button" class="Highlight" onclick="showMaterial('dashboardcont')">Dashboard</button></li> 
+            <li id="listt"><button id="AddS#-button" class="Highlight" onclick="showMaterial('search')">Add Serial Number</button></li>
             <li id="listt"><a href='listCustomer.html' class="buttonlink">Saved Serial Numbers</a></li>
-            <li id="listt"><button id="ManageADD" class="Highlight" onclick="showMaterial('ManageAddress')">Manage Addresses</button></li>
-            <li id="listt"><button id="Settings" class="Highlight" onclick="showMaterial('Setting')">Settings</button></li>
-            <li id="logout"><button id="Logout" class="Highlight" onclick="showMaterial('Userlogout')">Log-Out</button></li>
+            <li id="listt"><button id="ManageADD-button" class="Highlight" onclick="showMaterial('ManageAddress')">Manage Addresses</button></li>
+            <li id="listt"><button id="Settings-button" class="Highlight" onclick="showMaterial('Setting')">Settings</button></li>
+            <li id="logout"><a href="/pages/login.html" class="buttonlink">Log-Out</a></li>
         </ul>
  </div>
 
  <div id="dashboardcont" class="content">
     <h2 id="title">Dashboard</h2>
+    
     <table id="organizecontent">
         <tr>
             <td>
@@ -129,8 +130,15 @@
         </tr>
     </table>
     </div>
-   
+    <div id="search"class="content">
+        <form>
+            <h2>Add Serial Number</h2>
+            <input type="text" id="searchbar" placeholder="3A5B6SOFTHARD">
+            <input type="submit" value="Add Serial Number"id="adds#">
+        </form>
+    </div>
     <div id="ManageAddress" class="content">
+        
         <table>
             <tr>
                 <td>
@@ -180,13 +188,9 @@
         
     </div>
     </div>
-    <div id="Userlogout" class="content">
-        <div style="margin-bottom: 30%;">
-        <p>You are logged out</p>
-        </div>
     </div>
  </div>
- </div>
+ 
 
 
  
