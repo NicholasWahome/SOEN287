@@ -6,6 +6,15 @@ window.onload = function() {
     button.click();
 }
 
+function clicked(button) {
+        // Remove the "clicked" class from all buttons, remove bold 
+        const buttons = document.querySelectorAll('.buttonlink');
+        buttons.forEach(b => b.classList.remove('clicked'));
+
+        // Add the "clicked" class to the clicked button, add bold
+        button.classList.add('clicked');
+    }
+
 function showMaterial(materialId) {
     const contentElements = document.getElementsByClassName("content");
     for (let i = 0; i < contentElements.length; i++) {
@@ -15,11 +24,7 @@ function showMaterial(materialId) {
     const selectedMaterial = document.getElementById(materialId);
     selectedMaterial.style.display = "block"; // Show the selected content
 
-    // Remove the "selected-button" class from all buttons
-    const buttons = document.querySelectorAll(".Highlight");
-    buttons.forEach(button => button.classList.remove("selected-button"));
-
-    // Add the "selected-button" class to the currently selected button
-    const selectedButton = document.getElementById(`${materialId}-button`);
-    selectedButton.classList.add("selected-button");
+    
+    
 }
+
