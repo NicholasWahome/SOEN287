@@ -6,6 +6,7 @@
     <title>Provider Products - Getsoft</title>
     <link rel="stylesheet" href="../styles/global-styles.css" />
     <link rel="stylesheet" href="../styles/manage-product.css" />
+    
 
 </head>
 <body>
@@ -49,7 +50,7 @@
         <!-- serial number generation -->
         <div class="generate-sn">
             <div class="sn-form">
-                <form  id="serial-num-form" action="#">
+                <form id="serial-num-form" action="/submit-form" method="post">
                     <div class="date-wrapper">
                         <label>Expiry date: <br><input id="date-checkbox" type="checkbox" name="lifetime" onclick="dateDisplay()"> lifetime</label>
                         <br>
@@ -79,10 +80,10 @@
 
     </div>
 
-   
+    <script src="../scripts/serialNumberGeneration.js" > </script>
 
 <!-- footer section feel free to add your credit -->
-<<footer>
+<footer>
     <div id="line">.</div>
     <div class="footer-info">
         <div class="credits-container">
