@@ -6,8 +6,8 @@ const userRoutes = require('./routes/userRoutes');
 const productRoutes = require('./routes/productRoutes');
 const serialNumberRoutes = require('./routes/serialNumRoutes');
 const authRoutes = require('./routes/authRoutes');
-const authMiddleware = require('./route/authMiddleware')
-
+const authMiddleware = require('./routes/authMiddleware')
+const session = require('express-session')
 const app = express();
 
 /* Make sure your port matches the port that YOU ARE FETCHING WITH!!! */
