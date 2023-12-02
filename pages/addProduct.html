@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../styles/global-styles.css" />
-    <link rel="stylesheet" type="text/css" href="../styles/form.css">
+    <link rel="stylesheet" type="text/css" href="/styles/global-styles.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/form.css">
+    <script src="../scripts/addProduct.js" > </script>
     <title>Add Product</title>
 </head>
 <body>
@@ -34,7 +35,7 @@
     <!-- add product page-->
     <div class="form-container">
         <h1>Add Product</h1>
-        <form action="">
+        <form action="/addProduct" method="post" enctype="multipart/form-data">
             <label for="product-name">Product Name:</label>
             <input type="text" name="product-name" required>
             <label for="product-version">Version:</label>
