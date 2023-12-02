@@ -1,8 +1,9 @@
 
 /*Myaccount css*/
 
+/*Containers*/
 
-/*Dashboard*/
+/*heading*/
 #greet
 {
 color: white;
@@ -11,92 +12,142 @@ font-size: large;
 margin-left: 6.5%;
 margin-top: 3%; 
 }
+/*Main container-includes side bar and display content*/
 .container
 {
+    color:white;
+    font-family: "Rubik","Helvetica";
     width: 92%;
     display: table;
     margin-left: 6.5%;
     margin-top: 2%;
 }
+/*container to display div side by side*/
 .containerrow
 {
     display:table-row;
 }
 
+.Displaycontent{
+    
+    margin-left: 2%;
+    margin-bottom: 10%;
+}
+/*Display content container*/
+.content 
+{
+    display: none; /* Initially hide all content */
+    
+    
+}
+
+
+/*Side bar*/
+
+.dashboardcontainer{
+    display:table-cell;
+    width: 18%;
+}
+/*container box */
 .dashboardbox
 {
-display:table-cell;
-position:absolute;
-width:14%;
 background-color: white;
 font-family: "Rubik", Helvetica;
-padding-left: 0.7%;
-padding-top: 1%;
-padding-right: 1%;
-padding-bottom:2%;
-margin-right: 2%;
-margin-left: 1%;
+padding-left: 5%;
+border-radius: 2%;
 list-style: none;
 }
-.dashboardcontent
+
+/*side bar buttons css handler*/
+.buttonlink
 {
-display:table-cell;
-width:80%;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-family:"Rubik" ;
+    padding-left: 2.5%;
+    text-align: left;
+    font-size:100%;
+}
+.buttonlink.clicked{
+    font-weight: bold;
+}
+/*Unordered list css*/
+.dashboardbox #ul
+{
+list-style: none;
+}
+
+.dashboardbox #listt
+{
+margin-top: 9%;
+}
+
+/*log-out button*/
+.dashboardbox #logout
+{
+padding-top: 40%;
+padding-bottom: 7%;
+}
+
+
+/*Display content */
+
+
+/*dashboard content css*/
+#dashboardcont
+{
 font-family: "Rubik", Helvetica;
 }
+/*table organization*/
 #organizecontent
 {
     width:100%;
     height:100%;
 }
+
 #dashboardline
 {
     margin: 2%,2%;
 }
 
-.dashboardcontent #lastproducts
+/* Dashboard content heading css*/
+#lastproducts
 {
     color:white;
-    
-
-   
 }
-.dashboardcontent #lastpurchase
+ #lastpurchase
 {
     color:white;
- 
-   
 }
-.dashboardcontent #Accountinfo
+#Accountinfo
 {
     color:white;
     margin-top: 29.5%;
-    
 }
 
-.dashboardcontent #Addressbook
+#Addressbook
 {
     color:white;
     margin-top: 16%;
-    
- 
-    
 }
 
 #shippingbox
 {
     padding-left:20%;
 }
-#defaultbutton
+
+/*Dashboard display buttons css */
+#Editbutton
 {
     background: none;
     border: none;
+    color: white;
+    text-decoration: underline;
     cursor: pointer;
-    font-family:"Rubik" ;
-    font-size:16px;
-    
 }
-#Editbutton
+#deleteid
 {
     background: none;
     border: none;
@@ -123,29 +174,56 @@ font-family: "Rubik", Helvetica;
 
 
 
-.dashboardbox #ul
-{
-list-style: none;
-}
 
+/* additional element edditors*/
 
-/* List */
-.dashboardbox #listt
-{
-margin-top: 9%;
-}
-.dashboardbox #dashboard
-{
-margin-top: 1%;
-font-weight: bold;
-}
-.dashboardbox #logout
-{
-padding-top: 40%;
-}
-.dashboardcontent #title
+ #title
 {
 color: white;
 }
+#defaultbutton-button{
+    padding-top: 7%;
+}
+.managingaddress
+{
+    font-family: "Rubik";
+    color:white;
+}
+
+.settingcontainer
+{
+    color: white;
+    margin-top: 3%;
+    font-family: "Rubik";
+}
+
+
+/*Search Serial Numbers display content */
+
+/*Search Bar */
+#searchbar{
+    padding-left:50%;
+    height: 50%;
+    text-align: center;
+    font-family: "Rubik";
+}
+
+
+/*to be implemented in second part of deliverable/Highlighting selected buttons*/
+.Highlight
+{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family:"Rubik" ;
+    font-size:16px;
+    text-align: left;
+    
+}
+.selected-button 
+{
+   font-weight: bold;
+}
+
 
 
