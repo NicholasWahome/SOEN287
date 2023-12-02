@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const version = formData.get('product-version');
         const productImage = formData.get('product-image');
         const name = productImage.name;
-
+        
         try {
             const response = await fetch('http://localhost:3000/product/addProduct', {
                 method: 'POST',
