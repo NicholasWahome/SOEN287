@@ -11,9 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const password = formData.get('password');
         const address = formData.get('address');
         const account_type = formData.get('account-type');
-
         try {
-            const response = await fetch('http://localhost:3000/signup', {
+            const response = await fetch('http://localhost:3000/user/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

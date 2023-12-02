@@ -8,11 +8,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const productName = formData.get('product-name');
         const version = formData.get('product-version');
         const productImage = formData.get('product-image');
+        const name = productImage.name;
 
         try {
-            const response = await fetch('http://localhost:3000/addProduct', {
+            const response = await fetch('http://localhost:3000/product/addProduct', {
                 method: 'POST',
-                body: formData, // Use FormData for file uploads
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    productName,
+                    version,
+                    name
+                }),
             });
 
             const result = await response.json();
