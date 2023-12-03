@@ -8,6 +8,7 @@ const dbConfig = {
  password: 'Database287//',
  connectString: "(description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1521)(host=adb.ca-montreal-1.oraclecloud.com))(connect_data=(service_name=geed4444a402754_getsoftdatabase_medium.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))"
 }
+const { getGlobalData, setGlobalData, modifyGlobalUsername, modifyGlobalPassword } = require('./globals');
 
 router.post('/signup', async (req, res) => {
     try {
@@ -57,14 +58,14 @@ router.post('/editPassword', async (req, res) => {
 router.get('/getUserDashboard', async (req, res) => {
     try {
         const connection = await oracledb.getConnection(dbConfig);
-        
+        const {username, password} = getGlobalData;
         // Replace this query with the actual query you need
         const result = await connection.execute(
             'SELECT name FROM users WHERE email = :email',
-            [JSON.stringify(req.session.user)]
+            {username}
         );
 
-        console.log(JSON.stringify(req.session.user).user); // Assuming you want to log the retrieved rows
+       
 
         connection.close();
         res.status(200).json({ success: true, data: result.rows });

@@ -1,6 +1,14 @@
 const authMiddleware = (req, res, next) => {
     try {
-        next();
+        // console.log(req.session); 
+        // if (req.session.user) {
+        //     console.log(req.user.session);
+            next();
+        // } else {
+        //     // User is not authenticated, send an unauthorized response
+        //     console.log(req.session); 
+        //     res.status(401).json({ success: false, message: 'Unauthorized' });
+        // }
     } catch (error) {
         console.log(req.session.user);
         console.error('Auth Middleware Error:', error);
@@ -9,3 +17,4 @@ const authMiddleware = (req, res, next) => {
 };
 
 module.exports = authMiddleware;
+

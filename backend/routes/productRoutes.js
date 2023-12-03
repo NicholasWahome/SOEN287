@@ -10,7 +10,7 @@ const dbConfig = {
   connectString: "(description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1521)(host=adb.ca-montreal-1.oraclecloud.com))(connect_data=(service_name=geed4444a402754_getsoftdatabase_medium.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))"
  }
 
-
+ const { getGlobalData, setGlobalData, modifyGlobalUsername, modifyGlobalPassword } = require('./globals');
 // Multer storage configuration for handling file uploads
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
