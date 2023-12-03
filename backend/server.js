@@ -14,7 +14,7 @@ const app = express();
 const PORT = 3000;
 
 // Middleware
-app.use(cors());
+app.use(cors( {credentials: true}));
 
 app.use(express.json());
 
@@ -30,7 +30,7 @@ app.use(session({
 }));
 
 // Routes
-app.use('/user', authMiddleware, userRoutes);
+app.use('/user',authMiddleware, userRoutes);
 app.use('/sn', authMiddleware, productRoutes);
 app.use('/product', authMiddleware, serialNumberRoutes);
 app.use('/auth', authRoutes);

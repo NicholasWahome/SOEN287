@@ -29,10 +29,11 @@ router.post('/submit-form', async (req, res) => {
       res.status(500).json({ success: false, message: 'Internal Server Error' });
     }
   });
+
+  router.post('/editSN', async(req,res)=> {
+
+  });
   
-
-
-
 
   // Function to generate random serial numbers
   function generateRandomSerialNumbers(amount, expiryDate) {

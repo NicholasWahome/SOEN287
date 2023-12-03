@@ -23,7 +23,7 @@ router.post('/login', async(req, res) => {
         // Check the length of the result rows
         if (result.rows.length > 0) {
             req.session.user = { email };
-            res.json({ success: true, message: 'Login successful' });
+            res.json({ success: true, message: 'Login successful'});
         } else {
             // No matching user found
             res.status(401).json({ success: false, message: 'Invalid credentials' });

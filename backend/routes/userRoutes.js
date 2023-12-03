@@ -30,4 +30,48 @@ router.post('/signup', async (req, res) => {
     }
 });
 
+// Edit User Password
+router.post('/editPassword', async (req, res) => {
+    try {
+        const { name, last_name, email, password, address, account_type } = req.body;
+
+        const connection = await oracledb.getConnection(dbConfig);
+
+        const result = await connection.execute(
+            `UPDATE users SET password = :password WHERE email = :email`,
+            { email, password },
+            { autoCommit: true }
+        );    
+
+        connection.close();
+
+        res.status(200).json({ success: true, message: `Account created successfully!` });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ success: false, message: 'Internal server error.' });
+    }
+
+});
+
+// Get User Information
+router.get('/getUserDashboard', async (req, res) => {
+    try {
+        const connection = await oracledb.getConnection(dbConfig);
+        
+        // Replace this query with the actual query you need
+        const result = await connection.execute(
+            'SELECT name FROM users WHERE email = :email',
+            [JSON.stringify(req.session.user)]
+        );
+
+        console.log(JSON.stringify(req.session.user).user); // Assuming you want to log the retrieved rows
+
+        connection.close();
+        res.status(200).json({ success: true, data: result.rows });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ success: false, message: 'Internal server error.' });
+    }
+});
+
 module.exports = router;
