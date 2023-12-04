@@ -10,6 +10,7 @@ const dbConfig = {
 }
 const { getGlobalData, setGlobalData, modifyGlobalUsername, modifyGlobalPassword } = require('./globals');
 
+
 router.post('/signup', async (req, res) => {
     try {
         const { name, last_name, email, password, address, account_type } = req.body;
@@ -54,13 +55,58 @@ router.post('/editPassword', async (req, res) => {
 
 });
 
+//Edit all the details for the user
+router.post('/editaccountinfo', async (req, res) => {
+    try {
+        const { name, last_name, password, address, account_type } = req.body;
+        email=getGlobalData();
+        let {username, Password} = getGlobalData();
+        const connection = await oracledb.getConnection(dbConfig);
+
+        const result = await connection.execute(
+            `UPDATE SET users (name, lastName, email, password, address, userType) VALUES (:name, :last_name, :email, :password, :address, :account_type)`,
+            [name, last_name, email, password, address, account_type],
+            {email:username},
+            { autoCommit: true }
+        );    
+
+        connection.close();
+
+        res.status(200).json({ success: true, message: `Account updated successfully` });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ success: false, message: 'failed' });
+    }
+
+});
+
+router.get('/getinfo', async (req, res) => {
+    try {
+        const connection = await oracledb.getConnection(dbConfig);
+        let {username, password} = getGlobalData();
+
+        // Replace this query with the actual query you need
+        const result = await connection.execute(
+            'SELECT name, lastname, email, address, usertype FROM users WHERE email = :email',
+            { email: username }
+        );
+
+        console.log(result);
+        connection.close();
+        res.json({ success: true, data });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ success: false, message: 'Internal server error.' });
+    }
+  });
+
 // Get User Information
 router.get('/getUserDashboard', async (req, res) => {
     try {
         const connection = await oracledb.getConnection(dbConfig);
         let {username, password} = getGlobalData();
 
-        // Replace this query with the actual query you need
+        
         const result = await connection.execute(
             'SELECT name FROM users WHERE email = :email',
             { email: username }
