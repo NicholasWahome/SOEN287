@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="../styles/listCustomer.css">
         <script src="../jsFront/visual-scripts.js"></script>
         <script src="../jsFront/custaccount.js"></script>
+        <script src="../jsFetch/getlistProduct.js" type = "application/javascript"></script>
     </head>
     <header>
         <!-- header banner -->
@@ -43,230 +44,33 @@
                 </ul>
             </div>
         <!--Start Of List-->
-        <div id="list">
-            <!---List Entry-->
-            <li class="entry">
-                <strong id="providerName">Provider Name:</strong> ABC Software Co.
-                <strong id="clientNameLabel">Client Name:</strong> John Doe
-                <strong id="clientIDLabel">Client ID:</strong> 12345
-                <strong id="serialNumberLabel">Serial Number:</strong> 123456789
-                <ul class="details">
-                    <li>
-                        <strong id="softwareNameLabel">Software Name:</strong> Product A
-                    </li>
-                    <li>
-                        <strong id="purchaseDateLabel">Purchase Date:</strong> 2023-01-15
-                    </li>
-                    <li>
-                        <strong id="expiryDateLabel">Expiry Date:</strong> 2024-01-15
-                    </li>
-                    <li>
-                        <strong id="statusLabel">Status:</strong> Active
-                    </li>
-                </ul>
-                <br>
-                <button>Delete</button>
-                <button>Renew</button>
-            </li>
-            <br>
-            <!---List Entry-->
-            <li class="entry">
-                <strong id="providerName">Provider Name:</strong> XYZ Software Inc.
-                <strong id="clientNameLabel">Client Name:</strong> Jane Smith
-                <strong id="clientIDLabel">Client ID:</strong> 67890
-                <strong id="serialNumberLabel">Serial Number:</strong> 987654321
-                <ul class="details">
-                    <li>
-                        <strong id="softwareNameLabel">Software Name:</strong> Product B
-                    </li>
-                    <li>
-                        <strong id="purchaseDateLabel">Purchase Date:</strong> 2023-03-20
-                    </li>
-                    <li>
-                        <strong id="expiryDateLabel">Expiry Date:</strong> 2024-03-20
-                    </li>
-                    <li>
-                        <strong id="statusLabel">Status:</strong> Active
-                    </li>
-                </ul>
-                <br>
-                <button>Delete</button>
-                <button>Renew</button>
-            </li>
-            <br>
-            <!---List Entry-->
-            <li class="entry">
-                <strong id="providerName">Provider Name:</strong> PQR Software Ltd.
-                <strong id="clientNameLabel">Client Name:</strong> Alice Johnson
-                <strong id="clientIDLabel">Client ID:</strong> 54321
-                <strong id="serialNumberLabel">Serial Number:</strong> 98712345
-                <ul class="details">
-                    <li>
-                        <strong id="softwareNameLabel">Software Name:</strong> Product C
-                    </li>
-                    <li>
-                        <strong id="purchaseDateLabel">Purchase Date:</strong> 2023-04-10
-                    </li>
-                    <li>
-                        <strong id="expiryDateLabel">Expiry Date:</strong> 2024-04-10
-                    </li>
-                    <li>
-                        <strong id="statusLabel">Status:</strong> Active
-                    </li>
-                </ul>
-                <br>
-                <button>Delete</button>
-                <button>Renew</button>
-            </li>
-            <br>
-            <!---List Entry-->
-            <li class="entry">
-                <strong id="providerName">Provider Name:</strong> ABC Software Co.
-                <strong id="clientNameLabel">Client Name:</strong> John Doe
-                <strong id="clientIDLabel">Client ID:</strong> 12345
-                <strong id="serialNumberLabel">Serial Number:</strong> 123456789
-                <ul class="details">
-                    <li>
-                        <strong id="softwareNameLabel">Software Name:</strong> Product A
-                    </li>
-                    <li>
-                        <strong id="purchaseDateLabel">Purchase Date:</strong> 2023-01-15
-                    </li>
-                    <li>
-                        <strong id="expiryDateLabel">Expiry Date:</strong> 2024-01-15
-                    </li>
-                    <li>
-                        <strong id="statusLabel">Status:</strong> Active
-                    </li>
-                </ul>
-                <br>
-                <button>Delete</button>
-                <button>Renew</button>
-            </li>
-            <br>
-            <!---List Entry-->
-            <li class="entry">
-                <strong id="providerName">Provider Name:</strong> ABC Software Co.
-                <strong id="clientNameLabel">Client Name:</strong> John Doe
-                <strong id="clientIDLabel">Client ID:</strong> 12345
-                <strong id="serialNumberLabel">Serial Number:</strong> 123456789
-                <ul class="details">
-                    <li>
-                        <strong id="softwareNameLabel">Software Name:</strong> Product A
-                    </li>
-                    <li>
-                        <strong id="purchaseDateLabel">Purchase Date:</strong> 2023-01-15
-                    </li>
-                    <li>
-                        <strong id="expiryDateLabel">Expiry Date:</strong> 2024-01-15
-                    </li>
-                    <li>
-                        <strong id="statusLabel">Status:</strong> Active
-                    </li>
-                </ul>
-                <br>
-                <button>Delete</button>
-                <button>Renew</button>
-            </li>
-            <br>
-            <!---List Entry-->
-            <li class="entry">
-                <strong id="providerName">Provider Name:</strong> ABC Software Co.
-                <strong id="clientNameLabel">Client Name:</strong> John Doe
-                <strong id="clientIDLabel">Client ID:</strong> 12345
-                <strong id="serialNumberLabel">Serial Number:</strong> 123456789
-                <ul class="details">
-                    <li>
-                        <strong id="softwareNameLabel">Software Name:</strong> Product A
-                    </li>
-                    <li>
-                        <strong id="purchaseDateLabel">Purchase Date:</strong> 2023-01-15
-                    </li>
-                    <li>
-                        <strong id="expiryDateLabel">Expiry Date:</strong> 2024-01-15
-                    </li>
-                    <li>
-                        <strong id="statusLabel">Status:</strong> Active
-                    </li>
-                </ul>
-                <br>
-                <button>Delete</button>
-                <button>Renew</button>
-            </li>
-            <br>
-            <li class="entry">
-                <strong id="providerName">Provider Name:</strong> ABC Software Co.
-                <strong id="clientNameLabel">Client Name:</strong> John Doe
-                <strong id="clientIDLabel">Client ID:</strong> 12345
-                <strong id="serialNumberLabel">Serial Number:</strong> 123456789
-                <ul class="details">
-                    <li>
-                        <strong id="softwareNameLabel">Software Name:</strong> Product A
-                    </li>
-                    <li>
-                        <strong id="purchaseDateLabel">Purchase Date:</strong> 2023-01-15
-                    </li>
-                    <li>
-                        <strong id="expiryDateLabel">Expiry Date:</strong> 2024-01-15
-                    </li>
-                    <li>
-                        <strong id="statusLabel">Status:</strong> Active
-                    </li>
-                </ul>
-                <br>
-                <button>Delete</button>
-                <button>Renew</button>
-            </li>
-            <br>
-            <li class="entry">
-                <strong id="providerName">Provider Name:</strong> ABC Software Co.
-                <strong id="clientNameLabel">Client Name:</strong> John Doe
-                <strong id="clientIDLabel">Client ID:</strong> 12345
-                <strong id="serialNumberLabel">Serial Number:</strong> 123456789
-                <ul class="details">
-                    <li>
-                        <strong id="softwareNameLabel">Software Name:</strong> Product A
-                    </li>
-                    <li>
-                        <strong id="purchaseDateLabel">Purchase Date:</strong> 2023-01-15
-                    </li>
-                    <li>
-                        <strong id="expiryDateLabel">Expiry Date:</strong> 2024-01-15
-                    </li>
-                    <li>
-                        <strong id="statusLabel">Status:</strong> Active
-                    </li>
-                </ul>
-                <br>
-                <button>Delete</button>
-                <button>Renew</button>
-            </li>
-            <br>
-            <li class="entry">
-                <strong id="providerName">Provider Name:</strong> ABC Software Co.
-                <strong id="clientNameLabel">Client Name:</strong> John Doe
-                <strong id="clientIDLabel">Client ID:</strong> 12345
-                <strong id="serialNumberLabel">Serial Number:</strong> 123456789
-                <ul class="details">
-                    <li>
-                        <strong id="softwareNameLabel">Software Name:</strong> Product A
-                    </li>
-                    <li>
-                        <strong id="purchaseDateLabel">Purchase Date:</strong> 2023-01-15
-                    </li>
-                    <li>
-                        <strong id="expiryDateLabel">Expiry Date:</strong> 2024-01-15
-                    </li>
-                    <li>
-                        <strong id="statusLabel">Status:</strong> Active
-                    </li>
-                </ul>
-                <br>
-                <button>Delete</button>
-                <button>Renew</button>
-            </li>
-            <br>
-        </div>
+        <div id="listEntries">
+                <!-- List Entry
+                <li class="entry">
+                    <strong id="providerName">Provider Name:</strong> ABC Software Co.
+                    <strong id="clientNameLabel">Client Name:</strong> John Doe
+                    <strong id="clientIDLabel">Client ID:</strong> 12345
+                    <strong id="serialNumberLabel">Serial Number:</strong> 123456789
+                    <ul class="details">
+                        <li>
+                            <strong id="softwareNameLabel">Software Name:</strong> Product A
+                        </li>
+                        <li>
+                            <strong id="purchaseDateLabel">Purchase Date:</strong> 2023-01-15
+                        </li>
+                        <li>
+                            <strong id="expiryDateLabel">Expiry Date:</strong> 2024-01-15
+                        </li>
+                        <li>
+                            <strong id="statusLabel">Status:</strong> Active
+                        </li>
+                    </ul>
+                    <br>
+                    <button>Delete</button>
+                    <button>Renew</button>
+                </li>
+                <br> -->
+        </div> 
     </body>
 
     <footer>

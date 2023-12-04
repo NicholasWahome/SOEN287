@@ -11,6 +11,7 @@ const dbConfig = {
  const { getGlobalData, setGlobalData, modifyGlobalUsername, modifyGlobalPassword } = require('./globals');
 
 
+
 // Create a serial number - route
 router.post('/submit-form', async (req, res) => {
     try {
@@ -57,35 +58,33 @@ router.post('/submit-form', async (req, res) => {
     return serialNumber;
   }
   
-  // Save serial numbers to the database
+
   async function saveSerialNumbersToDB(serialNumbers) {
       let connection;
     
       try {
-        // Establish a connection to the Oracle database
         connection = await oracledb.getConnection(dbConfig);
     
-        // Iterate through the serial numbers and insert them into the database
+
         for (const serialNumber of serialNumbers) {
           const query = `
             INSERT INTO SerialNumbers (serial_number, expiry_date)
             VALUES (:serial_number, TO_DATE(:expiry_date, 'YYYY-MM-DD'))
           `;
     
-          // Bind variables
+
           const binds = {
             serial_number: serialNumber.serialNumber,
             expiry_date: serialNumber.expiryDate,
           };
     
-          // Execute the query
+
           const result = await connection.execute(query, binds, { autoCommit: true });
           console.log(`Serial number ${serialNumber.serialNumber} inserted into the database.`);
         }
       } catch (error) {
         console.error('Error saving serial numbers to the database:', error);
       } finally {
-        // Close the connection when done
         if (connection) {
           try {
             await connection.close();
@@ -95,5 +94,98 @@ router.post('/submit-form', async (req, res) => {
         }
       }
     }
+router.get('/listSN', async(req,res) =>{
+  try {
+    const connection = await oracledb.getConnection(dbConfig);
+    let { username, password } = getGlobalData();
+    const result = await connection.execute(
+        `SELECT name, lastName, email, address, productName, productVersion, serialNum, expiryDate, Status 
+          FROM purchasedproducts WHERE email = :email`,
+        { email: username },
+    );
 
+    connection.close();
+    console.log(result.rows[0]);
+
+    res.status(200).json({
+        data: result.rows[0]
+    });
+} catch (error) {
+    console.error('Error:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+}
+});
+
+router.get('listSNP', async(req,res) =>{
+  try {
+    const connection = await oracledb.getConnection(dbConfig);
+    let { username, password } = getGlobalData();
+    const result = await connection.execute(
+        `SELECT name, lastName, email, address, productName, productVersion, serialNum, expiryDate, Status 
+          FROM purchasedproducts WHERE email = :email`,
+        { email: username },
+    );
+
+    connection.close();
+    console.log(result.rows[0]);
+
+    // Sending only the values to the client
+    res.status(200).json({
+        data: result.rows[0]
+    });
+} catch (error) {
+    console.error('Error:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+}
+});
+
+router.post('/addingSN', async(req,res) =>{
+  try {
+    const connection = await oracledb.getConnection(dbConfig);
+    let { username, password } = getGlobalData();
+    const {productName,productVersion,serialNum } = req.body;
+
+    purchaseData = {
+      name :'john.doe@example.com',
+      lastName:'john.doe@example.com',
+      email: username,
+      address:'123 Main St',
+      productName:productName,
+      productVersion:productVersion,
+      serialNum:serialNum,
+      expiryDate:'2023-06-30',
+      status:'available'
+    }
+    const result1 = await connection.execute(
+      `INSERT INTO REGISTEREDPRODUCTS(serialNum,expiryDate )
+      VALUES(:serialNum, :expiryDate)`,
+      {serialNum: purchaseData.serialNum,expiryDate :purchaseData.expiryDate},
+      { autoCommit: true } 
+  );
+  const result2 = await connection.execute(
+    `INSERT INTO PRODUCTS (productName, productVersion, pathImage)
+     VALUES (:productName, :productVersion, :pathImage)`,
+    {
+        productName: purchaseData.productName,
+        productVersion: purchaseData.productVersion,
+        pathImage: '/images/default.jpg' 
+    },
+    { autoCommit: true } 
+    );
+    const result3 = await connection.execute(
+      `INSERT INTO PurchasedProducts 
+       (name, lastName, email, address, productName, productVersion, serialNum, expiryDate, status)
+       VALUES (:name, :lastName, :email, :address, :productName, :productVersion, :serialNum, :expiryDate, :status)`,
+      purchaseData,
+      { autoCommit: true } 
+  );
+    connection.close();
+    res.status(200).json({ success: true, message: `Product Added!` });
+} catch (error) {
+    console.error('Error:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+}
+});
+
+  
 module.exports = router;

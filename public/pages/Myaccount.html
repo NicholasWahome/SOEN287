@@ -11,6 +11,7 @@
 <script src="../jsFront/visual-scripts.js"></script>
 <!-- <script src="../jsFetch/editPassword.js"></script> -->
 <script src="../jsFetch/getUserDashboard.js" type = "application/javascript"></script>
+<script src="../jsFetch/addSerialNumber.js" type = "application/javascript"></script>
 </head>
 <body>
     <header>
@@ -38,7 +39,7 @@
     </header>
  <div class="account desc">
     <div id="greet">
-    <h1>Hello, Joe </h1>
+    <h1>Hello <h1 id ="userPrompt"></h1> </h1>
     </div>
  </div>
  <!--Container storing the side bar and content-->
@@ -96,9 +97,9 @@
             <h3>Account Information</h3>
             <div id="line"></div>
             <h4>Contact Information</h4>
-            <p id="dashboardName">Joe Lindner</p>
-            <p>JoeLindner420@gmail.com</p>
-            <p>123456</p>
+            <p id="contactName"></p>
+            <p id ="email"></p>
+            <p id = "address"></p>
             <br>
             <button id="Editbutton">Edit</button>
             <button id="passbutton">Change password</button>
@@ -141,16 +142,23 @@
     <!--Display Content of Adding serial Numbers-->
     <div id="search"class="content">
         <div id="serialsearch">
-        <form action="" method="get" class="searchbar">
+        <form action="" class="searchbar" id="addSerialNumber">
             <h2>Add Serial Number</h2>
             <br/>
-            <input type="text" placeholder="3A5B6SOFTHARD">
-            <button id="addserialNO">Add</button>
+            <label for="input1"></label>
+            <input id="input1" type="text" placeholder="product-name">
+            <br>
+            <label for="input2"></label>
+            <input id="input2" type="text" placeholder="product-version">
+            <br>
+            <label for="input3"></label>
+            <input id="input3" type="text" placeholder="3A5B6SOFTHARD">
+            <button id="addserialNO" type="submit">Add</button>
         </form>
         </div>
     </div>
 
-    <!--Display content for managing addresses-->
+    <!-- Display content for managing addresses -->
     <div id="ManageAddress" class="content">
         <h2>Account Settings</h2>
         <table>
