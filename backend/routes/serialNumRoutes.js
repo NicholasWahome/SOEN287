@@ -21,8 +21,8 @@ router.post('/submit-form', async (req, res) => {
       // Generate random serial numbers
       const serialNumbers = generateRandomSerialNumbers(parseInt(amnt), exp);
   
-      // Save serial numbers to the database
-      // await saveSerialNumbersToDB(serialNumbers);
+      Save serial numbers to the database
+      await saveSerialNumbersToDB(serialNumbers);
   
       // Send a response to the client
       res.json({ success: true, message: 'Serial numbers generated and saved successfully.' });
@@ -144,7 +144,7 @@ router.post('/addingSN', async(req,res) =>{
     const connection = await oracledb.getConnection(dbConfig);
     let { username, password } = getGlobalData();
     const {productName,productVersion,serialNum } = req.body;
-
+    console.log(productName,productVersion,serialNum)
     purchaseData = {
       name :'john.doe@example.com',
       lastName:'john.doe@example.com',
