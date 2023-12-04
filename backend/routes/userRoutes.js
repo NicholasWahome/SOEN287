@@ -62,12 +62,11 @@ router.get('/getUserDashboard', async (req, res) => {
 
         // Replace this query with the actual query you need
         const result = await connection.execute(
-            'SELECT name FROM users WHERE email = :email',
+            'SELECT name, email, address FROM users WHERE email = :email',
             { email: username }
         );
-        console.log(result);
         connection.close();
-        res.status(200).json({ success: true});
+        res.status(200).json({data: result.rows[0]});
     } catch (error) {
         console.error(error);
         res.status(500).json({ success: false, message: 'Internal server error.' });
