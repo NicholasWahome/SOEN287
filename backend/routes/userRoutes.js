@@ -30,4 +30,39 @@ router.post('/signup', async (req, res) => {
     }
 });
 
+router.delete('/deleteAccount', async (req, res) => {
+    try {
+        const { useremail } = req.body;
+
+        const connection = await oracledb.getConnection(dbConfig);
+
+
+        const checkEmailResult = await connection.execute(
+            `SELECT COUNT(*) as count FROM users WHERE email = :email`,
+            [email]
+        );
+
+        if (checkEmailResult.rows[0].COUNT === 0) {
+            connection.close();
+            return res.status(404).json({ success: false, message: 'Account not found.' });
+        }
+
+        const deleteResult = await connection.execute(
+            `DELETE FROM users WHERE email = :email`,
+            [email],
+            { autoCommit: true }
+        );
+
+        connection.close();
+
+        res.status(200).json({ success: true, message: 'Account deleted successfully!' });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ success: false, message: 'Internal server error.' });
+    }
+});
+
+
+
+
 module.exports = router;

@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="../styles/myAccount.css">
 <script src="../jsFront/custaccount.js"></script>
 <script src="../jsFront/visual-scripts.js"></script>
+<script src="../jsFetch/deleteAccount.js" > </script>
 </head>
 <body>
     <header>
@@ -181,9 +182,9 @@
     <div id="Setting" class="content">
         <h2>Account Settings</h2>
         <div class="settingcontainer">
-            <p>Name: Joe </p>        
+            <p i>Name: Joe </p>        
             <br>
-            <p>Email:Joe420@gmail.com</p>
+            <p>Email:<div id="email">alanw@example.com</div></p>
             <br>
             <p>Phone: +123456</p>
             <br>
@@ -194,6 +195,7 @@
             <button id="Editbutton">Edit</button>
             <button id="passbutton">Change password</button>
             <button id="deleteid">Delete Account</button> 
+
         </div>
         
     </div>
@@ -235,6 +237,8 @@
         <a class="footerLogo" href="index.html">GetSoft.</a>
     </div>
 </footer>
+
+
 </html>
 
 
