@@ -21,11 +21,8 @@ router.post('/login', async(req, res) => {
         `, { email, password });
         // Check the length of the result rows
         if (result.rows.length > 0) {
-            username = result.rows[0][0];
-            password = result.rows[0][1];
-            modifyGlobalUsername(username);
+            modifyGlobalUsername(email);
             modifyGlobalPassword(password);
-            
             res.json({ success: true, message: 'Login successful'});
         } else {
             // No matching user found

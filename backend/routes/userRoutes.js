@@ -58,17 +58,16 @@ router.post('/editPassword', async (req, res) => {
 router.get('/getUserDashboard', async (req, res) => {
     try {
         const connection = await oracledb.getConnection(dbConfig);
-        const {username, password} = getGlobalData;
+        let {username, password} = getGlobalData();
+
         // Replace this query with the actual query you need
         const result = await connection.execute(
             'SELECT name FROM users WHERE email = :email',
-            {username}
+            { email: username }
         );
-
-       
-
+        console.log(result);
         connection.close();
-        res.status(200).json({ success: true, data: result.rows });
+        res.status(200).json({ success: true});
     } catch (error) {
         console.error(error);
         res.status(500).json({ success: false, message: 'Internal server error.' });

@@ -7,22 +7,6 @@ app.use(express.json());
 const authMiddleware = require('./routes/authMiddleware');
 const crypto = require('crypto');
 
-
-
-
-let globalData = {};
-
-// Middleware to set global data
-app.use((req, res, next) => {
-    // Modify globalData as needed based on req or session data
-    globalData.user = req.session.user; 
-    globalData.password = req.session.user
-
-    // Continue to the next middleware or route handler
-    next();
-});
-
-
 const userRoutes = require('./routes/userRoutes');
 const productRoutes = require('./routes/productRoutes');
 const serialNumberRoutes = require('./routes/serialNumRoutes');
