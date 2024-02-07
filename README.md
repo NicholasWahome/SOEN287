@@ -33,8 +33,12 @@ Getting Started
 Clients access the system through a web browser.
 Software providers install and maintain the system.
 Usage
+
+
 Clients manage their accounts and licenses.
 Software providers oversee client accounts, serial numbers, and client communication.
 Development
 Develop this project in groups with four students.
 Properly cite any reused external material.
+
+<img src="image.png">
